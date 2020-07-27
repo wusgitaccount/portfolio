@@ -13,13 +13,13 @@ body {
   position:relative;
 }
 
-.sw-page-1{
+.sw-page-1-container{
   width: 50%;
   float: left;
   overflow: hidden;
 }
 
-.sw-page-2 {
+.sw-page-2-container {
   width: 50%;
   float: left;
   overflow: hidden;
