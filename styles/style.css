@@ -1,0 +1,26 @@
+body {
+  padding: 0;
+  width:100%;
+  fontsize: 14px;
+  line-height: 1.5;
+  background-color: #F8F8F8;
+  font-family: 'Coda', sans-serif;
+  color: black;
+}
+.sw-page {
+  width: 100%;
+  overflow: hidden;
+  position:relative;
+}
+
+.sw-page-1{
+  width: 50%;
+  float: left;
+  overflow: hidden;
+}
+
+.sw-page-2 {
+  width: 50%;
+  float: left;
+  overflow: hidden;
+}
