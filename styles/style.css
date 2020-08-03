@@ -1,10 +1,10 @@
 body {
   padding: 0;
   width:100%;
-  fontsize: 14px;
+  font-size: 12px;
   line-height: 1.5;
-  background-color: #F8F8F8;
-  font-family: 'Coda', sans-serif;
+  background-color: white;
+  font-family: serif;
   color: black;
 }
 .sw-page {
@@ -14,13 +14,46 @@ body {
 }
 
 .sw-page-1-container{
-  width: 50%;
+  width: 20%;
   float: left;
   overflow: hidden;
+  position: fixed;
 }
 
 .sw-page-2-container {
-  width: 50%;
+  width: 80%;
+  float: right;
+  overflow: hidden;
+  padding: 3%;
+}
+
+.sw-page-2-info{
+  width: 30%;
   float: left;
+  overflow: hidden;
+  position: relative;
+}
+
+.sw-page-2-images{
+  width: 65%;
+  float: left;
+  overflow: hidden;
+  margin-left: 2.5%;
+}
+.sw-page-1-intro{
+  margin-left: 2.5%;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+.sw-page-2-images--1{
+  width: 48%;
+  float: left;
+  overflow: hidden;
+}
+.sw-page-2-images--2{
+  width: 48%;
+  float: right;
   overflow: hidden;
 }
