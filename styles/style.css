@@ -64,19 +64,19 @@ img {
   }
   .sw-page-1-container{
     width:250px;
-    position: fixed;
+    position: relative;
   }
   .sw-page-2-container{
-    width:250px;
+    width:300px;
     flex-direction:column;
+    float: left;
   }
-.sw-page-2-info{
-  width:250px;
-  border-right:none;
-  }
-.sw-page-2-images{
-    width:250px;
-  }
+  .sw-page-2-info{
+    width:300px;
+    }
+  .sw-page-2-images{
+      width:300px;
+    }
 
 
 }
