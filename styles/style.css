@@ -57,3 +57,26 @@ img {
   float: right;
   overflow: hidden;
 }
+
+@media screen and (max-width: 500px) {
+  .sw-page{
+  flex-direction:column;
+  }
+  .sw-page-1-container{
+    width:250px;
+    position: fixed;
+  }
+  .sw-page-2-container{
+    width:250px;
+    flex-direction:column;
+  }
+.sw-page-2-info{
+  width:250px;
+  border-right:none;
+  }
+.sw-page-2-images{
+    width:250px;
+  }
+
+
+}
