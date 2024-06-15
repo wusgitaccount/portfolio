@@ -147,17 +147,16 @@ color: inherit;
   max-width: 100%;
   border-radius: 5%;
   display: block;
-margin-left: auto;
-margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 .p4u-page {
-  margin: auto;
+    margin: auto;
     padding: 10px;
     text-align: center;
-border: 1px solid gradient;
-    font-size: 30px;
-    line-height: 80%;
-
+    border: 1px solid gradient;
+    font-size: 2em;
+        line-height: 1.5;
 }
 
 .sw-page {
