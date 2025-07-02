@@ -15,7 +15,7 @@ body{
   overflow: hidden;
 }
 
- iframe {
+ .video-container iframe {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -159,13 +159,17 @@ color: inherit;
     line-height: 1.5;
 }
 
+.asz-title{
+  position: sticky;
+  top: 0;
+  pointer-events: none;
 
+}
 .asz-container{
   height: 5000px;
   margin-top:30vh;
 }
 .asz-wrapper img{
-  max-width: 25%;
   border-radius: 5%;
   display: block;
   margin-left: auto;
