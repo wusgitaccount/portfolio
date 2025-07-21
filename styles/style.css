@@ -30,8 +30,9 @@ body{
 .asz-wrapper{
   width: 100%;
   display: flex;
-
+  position: absolute;
 }
+
 .asz-title{
   top: 0;
   background: #eee;
@@ -40,14 +41,22 @@ body{
   padding: 5px 25px;
   font-family: "Libertinus Mono", monospace;
   border-style: dotted;
-  float: left;
+  z-index: 1000;
+  cursor: pointer;
+}
+/* When toggled */
+#toggle-height:checked + .asz-title-toggle .asz-title {
+  height: 220px; /* or any desired value */
+  overflow: hidden; /* Hide the overflow */
 }
 
 .asz-container{
+  width: 100vw;
   height: 100vh;
-  float: right;
   flex: 1 0 auto;
-
+  position: absolute;
+  z-index:-10;
+  overflow: hidden;
 }
 
 .asz-section img{
