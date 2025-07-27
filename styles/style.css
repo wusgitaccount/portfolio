@@ -13,7 +13,7 @@ body{
   .video-container iframe {
     height: 56.25vw;
   }
-
+}
 @media (max-aspect-ratio: 16/9) {
   .video-container iframe {
     width: 177.78vh;
@@ -35,9 +35,9 @@ body{
   padding: 5px 25px;
   font-family: "Libertinus Mono", monospace;
   border-style: dotted;
-  z-index: 1000;
+  z-index: 10;
   cursor: pointer;
-  position: fixed;
+  position:fixed;
 }
 
 /* When toggled */
@@ -64,9 +64,9 @@ body{
   margin-left: 25vw;
 }
 
-.asz-section img{
-max-width: 30%;
-height: auto;
+.asz-section img {
+  max-width: 30%;
+  height: auto;
 }
 
 .asz-section{
@@ -90,8 +90,8 @@ height: auto;
   .asz-wrapper {
     flex-direction: column;
   }
-  .asz-title{
-    max-width: 100%;
+  .asz-title {
+    max-width: 100vw;
     height: auto;
     position: relative;
     padding: 10px;
@@ -139,7 +139,7 @@ height: auto;
   margin-left: 2.5%;
 }
 
-.sw-page img {
+.sw-page-2-container img {
     max-width: 100%;
     height: auto;
 }
@@ -160,22 +160,27 @@ height: auto;
   flex-direction:column;
   }
   .sw-page-1-container{
-    width:250px;
+    width: 100%;
     position: relative;
   }
   .sw-page-2-container{
-    width:300px;
+    width: 100%;
     flex-direction:column;
     float: left;
   }
   .sw-page-2-info{
-    width:300px;
+    width: 100%;
     }
   .sw-page-2-images{
-      width:300px;
+    width: 100%;
     }
-
+  
+  .sw-page-2-images--1, .sw-page-2-images--2 img {
+    max-width: 100%;
+    height: auto;
+  }
 }
+
 
 /* party4u styles */
 #progress-bar {
