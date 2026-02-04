@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Courier Prime");
 body{
-  overflow-x: hidden
+  overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+background-color: aliceblue;
 }
 #body{
     position: relative;
@@ -19,25 +21,54 @@ body{
     width: 177.78vh;
   }
 }
+::-webkit-scrollbar {
+  width: 70px;
+  height: 30px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 10px rgb(94, 57, 255); 
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(120, 37, 37); 
+  border-radius: 25px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000; 
+}
+
 .asz-wrapper{
   width: 100%;
   display: flex;
   position: absolute;
-  margin: 0px;
   z-index: -11;
 }
 
 .asz-title{
-  top: 0;
+  top: 10px;
   background: #eee;
   max-width: 20vw;
-  height: 100vh;
+  height: 90vh;
   padding: 5px 25px;
   font-family: "Libertinus Mono", monospace;
+  border: #ffc9f5;
   border-style: dotted;
+  border-width: 10px;
   z-index: 10;
   cursor: pointer;
   position:fixed;
+  border-radius: 15px;
+  transition: 1s ease-in-out;
+}
+.asz-title:hover {
+    border-width: 5px;
+
 }
 
 /* When toggled */
@@ -48,21 +79,14 @@ body{
 
 .asz-container{
   width: 100vw;
-  height: 100vh;
+  height: 200vh;
   flex: 1 0 auto;
   position: absolute;
   z-index:-10;
   overflow: hidden; 
+  
 }
-.gifting-container{
-  width: 70vw;
-  height: auto;
-  flex: 1 0 auto;
-  position: absolute;
-  z-index:-10;
-  overflow: hidden; 
-  margin-left: 25vw;
-}
+
 
 .asz-section img {
   max-width: 30%;
@@ -71,7 +95,6 @@ body{
 
 .asz-section{
   position: relative;
-  height: 400px;
   margin-bottom:200px;
 }
 
@@ -252,4 +275,73 @@ body{
   -webkit-mask-box-image: var(--_m);
   mask-border: var(--_m);
   clip-path: polygon(-41% 0,50% 91%, 141% 0);
+}
+
+/* gifting styles */
+
+.gifting-container{
+  width: 70vw;
+  height: auto;
+  flex: 1 0 auto;
+  position: absolute;
+  z-index:-10;
+  overflow: hidden; 
+  margin-left: 25vw;
+
+}
+
+.wrap-container {
+  background-color: #cff5ff;
+  overflow: auto;
+  white-space: nowrap;
+  padding: 15px;
+  border-radius: 15px;
+}
+
+.wrap-container img {
+  padding: 10px;
+  border-radius: 25px;
+  max-height: 350px;
+}
+
+.wrap-container video {
+  padding: 10px;
+  border-radius: 25px;
+  max-height: 350px;
+}
+
+.about-container{
+  width: 50vw;
+  height: auto;
+  flex: 1 0 auto;
+  position: absolute;
+  z-index:-10;
+  overflow: hidden; 
+  margin-left: 30vw;
+  border:#d5f758 30px;
+  border-style: dotted;
+  padding: 30px;
+
+}
+
+.tooltip {
+  position: relative;
+  cursor: pointer;
+}
+
+.tooltiptext {
+  visibility: hidden;
+  position: absolute;
+  z-index: 1000;
+  width: 200px;}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  display: block;
+}
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
 }
