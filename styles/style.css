@@ -79,7 +79,7 @@ background-color: aliceblue;
 
 .asz-container{
   width: 100vw;
-  height: 200vh;
+  height: 250vh;
   flex: 1 0 auto;
   position: absolute;
   z-index:-10;
@@ -108,16 +108,82 @@ background-color: aliceblue;
   font-family: "Libertinus Mono", monospace;
   font-stretch: condensed;
 }
+.about-container{
+  width: 50vw;
+  flex: 1 0 auto;
+  position: absolute;
+  z-index:-10;
+  overflow: hidden; 
+  margin-left: 30vw;
+  border:#d5f758 30px;
+  border-style: dotted;
+  padding: 30px;
+}
+
+.tooltip {
+  position: relative;
+  cursor: pointer;
+}
+
+.tooltiptext {
+  visibility: hidden;
+  position: absolute;
+  z-index: 1000;
+  width: 200px;}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  display: block;
+}
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+
+#survivor {
+  width: 800px;
+  min-height: 400px; /* adjust as needed */
+  border: none;
+  display: block;
+  margin: 0 auto;
+}
 
 @media (max-width: 800px) {
   .asz-wrapper {
     flex-direction: column;
+    position: static;
+    width: 100vw;
   }
   .asz-title {
     max-width: 100vw;
+    width: 100vw;
     height: auto;
     position: relative;
     padding: 10px;
+    top: 0;
+    left: 0;
+    border-width: 5px;
+    border-radius: 0;
+    box-sizing: border-box;
+  }
+  .asz-container {
+    width: 100vw;
+    margin-left: 0;
+    position: relative;
+    height: auto;
+    min-height: 100vh;
+    box-sizing: border-box;
+  }
+  .about-container {
+    width: 100vw;
+    position: relative;
+    margin-left: 0;
+    border: #d5f758 5px dotted;
+    padding: 20px;
+    box-sizing: border-box;
   }
 }
 
@@ -310,38 +376,4 @@ background-color: aliceblue;
   max-height: 350px;
 }
 
-.about-container{
-  width: 50vw;
-  height: auto;
-  flex: 1 0 auto;
-  position: absolute;
-  z-index:-10;
-  overflow: hidden; 
-  margin-left: 30vw;
-  border:#d5f758 30px;
-  border-style: dotted;
-  padding: 30px;
 
-}
-
-.tooltip {
-  position: relative;
-  cursor: pointer;
-}
-
-.tooltiptext {
-  visibility: hidden;
-  position: absolute;
-  z-index: 1000;
-  width: 200px;}
-
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-  display: block;
-}
-.marquee {
-  width: 100%;
-  overflow: hidden;
-  white-space: nowrap;
-  box-sizing: border-box;
-}
