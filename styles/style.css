@@ -209,6 +209,7 @@ background-color: aliceblue;
   overflow: hidden;
   position: sticky;
   top: 0;  
+  margin-left: 2.5%;
 }
 
 .sw-page-2-images{
@@ -218,9 +219,6 @@ background-color: aliceblue;
   margin-left: 2.5%;
 }
 
-.sw-page-1-intro{
-  margin-left: 2.5%;
-}
 
 .sw-page-2-container img {
     max-width: 100%;
