@@ -124,14 +124,20 @@ background-color: aliceblue;
 
 .tooltip {
   position: relative;
+  display: inline-flex;
   cursor: pointer;
 }
 
 .tooltiptext {
   visibility: hidden;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
   position: absolute;
-  z-index: 1000;
-  width: 200px;}
+  z-index: 1;
+  }
 
 .tooltip:hover .tooltiptext {
   visibility: visible;
@@ -337,14 +343,13 @@ background-color: aliceblue;
 /* gifting styles */
 
 .gifting-container{
-  width: 70vw;
+  width: 65vw;
   height: auto;
   flex: 1 0 auto;
   position: absolute;
-  z-index:-10;
+  z-index: -10;
   overflow: hidden; 
-  margin-left: 25vw;
-
+  margin-left: 27vw;
 }
 
 .wrap-container {
