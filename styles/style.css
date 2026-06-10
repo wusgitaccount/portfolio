@@ -372,4 +372,28 @@ background-color: aliceblue;
   max-height: 350px;
 }
 
+/* dotted frame for htmlday page */
+.dotted-frame {
+  font: 16px/1.5 "Courier Prime", monospace;
+  width: 70%;
+  margin: 24px;
+  padding: 20px;
+  border: 1px dotted;
+  box-shadow: 0 0 50px 15px rgb(255, 255, 255);
+  border-radius: 12px;
+  box-sizing: border-box;
+  background: #BEE;
+background: linear-gradient(180deg, rgba(187, 238, 238, 1) 0%, rgba(255, 255, 255, 1) 100%);
+}
+
+/* tighten spacing on small screens */
+@media (max-width: 480px) {
+  .dotted-frame {
+    padding: 12px;
+    border-width: 4px;
+    width: calc(100% - 24px);
+    margin: 12px auto;
+  }
+}
+
 
