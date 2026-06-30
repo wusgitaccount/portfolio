@@ -1,299 +1,523 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Sophia Wu</title>
-  <meta name="viewport" content="initial-scale=1">
-  <link rel="stylesheet" href="./styles/style.css">
-  <link href="./styles/lightbox.css" rel="stylesheet" />
-  <link rel="icon" type="image/x-icon" href="./assets/cat.jpg">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Project Library</title>
+<link rel="stylesheet" href="./styles/style.css">
 </head>
-
 <body>
 
-  <div class="sw-page">
+<div class="lib-wrapper">
 
-   
-      <input type="checkbox" id="toggle-height" hidden>
-      <label for="toggle-height" class="asz-title-toggle">  
-      <header class="asz-title">
-        <p><a href="index.html">sophias island 𖦹</a></p>
-        <iframe width="270" height="150" src="https://www.youtube.com/embed/j2L_559nCjc?si=TzpO4HXsSpmKT_76controls=0&autoplay=1&mute=1&playsinline=1"></iframe>
-          <br>
-          <br>
-          <a href=project-library.html>library</a>
-          <br>
-          <a href="guestbook.html">guestbook</a>
-          <br>
-          <a href="gifting.html">gifting</a>
-              <br><br>
-          <p style="color:red;">This site is currently being updated please bear with!</p>
-          <br>
-          <a href="https://www.instagram.com/99s_____w_/">instagram↝</a>
-          <br>
-          <a href="http://goodreads.com/sophiawu">goodreads↝</a>
-          <br>
-          <a href="https://www.are.na/sophia-wu/">are.na↝</a>
-      </header>
-      </label>
-    
-    <div class="sw-page-2-container">
-      <div class="sw-page-2-info">
-        <p><a href="https://samanthahaha-cheng.com/">SAMANTHA CHENG WEBSITE</a>, 2024 - </p>
-          <div class="sw-page-2-description">
-            <p style="font-style: italic"> Samantha's portfolio, crafted and created with love in colloboration with Samantha.</p>
-          </div>
-            <br>
+  <header class="lib-header">
+    <a href="index.html">Sophia Wu</a>
 
-        </div>
-
-      <div class="sw-page-2-images">
-        <p>IDENTITY</p>
-        <div class="sw-page-2-images--1">
-          <a href="./assets/scw_4.mp4" data-lightbox="scw"> <vid src= "./assets/scw_4.mp4";></a>
-        </div>
-        <div class="sw-page-2-images--2">
-          <a href="./assets/scw_1.png" data-lightbox="scw"> <img src= "./assets/scw_1.png";></a>
-        </div>
-      </div>
-
-      <div class="sw-page-2-images">
-        <div class="sw-page-2-images--1">
-          <a href="./assets/scw_2.png" data-lightbox="scw"> <img src= "./assets/scw_2.png";></a>
-        </div>
-        <div class="sw-page-2-images--2">
-          <a href="./assets/scw_3.png" data-lightbox="scw"> <img src= "./assets/scw_3.png";></a>
-        </div>
-      </div>
-
+    <div class="enquiries">
+      <a href="mailto:sophiawu.nz@gmail.com">email</a>
+      <a href="https://www.are.na/sophia-wu">are.na</a>
+      <a href="https://www.instagram.com/99s_____w_">instagram</a>
     </div>
 
-    <div class="sw-page-2-container">
-      <div class="sw-page-2-info">
-        <p>HYPHEN LOGO & INTRODUCTORY POST, 2023</p>
-          <div class="sw-page-2-description">
-            <p style="font-style: italic"> Risograph animation.</p>
-          </div>
-            <br>
+  <iframe width="270" height="150" src="https://www.youtube.com/embed/j2L_559nCjc?si=TzpO4HXsSpmKT_76controls=0&autoplay=1&mute=1&playsinline=1"></iframe>
 
-        </div>
+  </header>
 
-      <div class="sw-page-2-images">
-        <p>IDENTITY</p>
-        <div class="sw-page-2-images--1">
-          <a href="./assets/hyphen-reduced-pixels.gif" data-lightbox="hyphen"> <img src= "./assets/hyphen-reduced-pixels.gif";></a>
-        </div>
-        <div class="sw-page-2-images--2">
-          <a href="./assets/hyphenlogo.gif" data-lightbox="hyphen"> <img src= "./assets/hyphenlogo.gif";></a>
-        </div>
-
-      </div>
-
+  <main>
+    <div class="archive-heading">
+      <p>Project Library</p>
+      <span class="counter" id="counter">01/56</span>
     </div>
 
-    <div class="sw-page-2-container">
-      <div class="sw-page-2-info">
-        <p>VACANT STOREFRONTS PROJECT: 15-31 WELLESLEY ST WEST, 2022</p>
-          <div class="sw-page-2-description">
-            <p style="font-style: italic"> Vinyl cut installation for vacant storefronts.</p>
-          </div>
-            <br>
-            <a href="./assets/vacantstorefront2.jpg" data-lightbox="vacantstore"> <img src= "./assets/vacantstorefront2.jpg";></a>
+    <div class="archive-layout">
+      <input type="radio" name="preview" id="preview-reset" class="preview-radio" checked>
+      <input type="radio" name="preview" id="preview-01" class="preview-radio">
+      <input type="radio" name="preview" id="preview-02" class="preview-radio">
+      <input type="radio" name="preview" id="preview-03" class="preview-radio">
+      <input type="radio" name="preview" id="preview-04" class="preview-radio">
+      <input type="radio" name="preview" id="preview-05" class="preview-radio">
+      <input type="radio" name="preview" id="preview-06" class="preview-radio">
+      <input type="radio" name="preview" id="preview-07" class="preview-radio">
+      <input type="radio" name="preview" id="preview-08" class="preview-radio">
+      <input type="radio" name="preview" id="preview-09" class="preview-radio">
+      <input type="radio" name="preview" id="preview-10" class="preview-radio">
+      <input type="radio" name="preview" id="preview-11" class="preview-radio">
+      <input type="radio" name="preview" id="preview-12" class="preview-radio">
+      <input type="radio" name="preview" id="preview-13" class="preview-radio">
+      <input type="radio" name="preview" id="preview-14" class="preview-radio">
+      <input type="radio" name="preview" id="preview-15" class="preview-radio">
+      <input type="radio" name="preview" id="preview-16" class="preview-radio">
+      <input type="radio" name="preview" id="preview-17" class="preview-radio">
+      <input type="radio" name="preview" id="preview-18" class="preview-radio">
+      <input type="radio" name="preview" id="preview-19" class="preview-radio">
+      <input type="radio" name="preview" id="preview-20" class="preview-radio">
+      <input type="radio" name="preview" id="preview-21" class="preview-radio">
+      <input type="radio" name="preview" id="preview-22" class="preview-radio">
+      <input type="radio" name="preview" id="preview-23" class="preview-radio">
+      <input type="radio" name="preview" id="preview-24" class="preview-radio">
+      <input type="radio" name="preview" id="preview-25" class="preview-radio">
+      <input type="radio" name="preview" id="preview-26" class="preview-radio">
+      <input type="radio" name="preview" id="preview-27" class="preview-radio">
+      <input type="radio" name="preview" id="preview-28" class="preview-radio">
+      <input type="radio" name="preview" id="preview-29" class="preview-radio">
+      <input type="radio" name="preview" id="preview-30" class="preview-radio">
+      <input type="radio" name="preview" id="preview-31" class="preview-radio">
+      <input type="radio" name="preview" id="preview-32" class="preview-radio">
+      <input type="radio" name="preview" id="preview-33" class="preview-radio">
+
+      <div class="archive-grid" id="grid">
+      <div class="grid-item" data-index="01">
+        <label class="open-label" for="preview-01"></label>
+        <label class="close-label" for="preview-reset"></label>
+        <figure>
+          <img src="./assets/hamishjessiesite.png" alt="Hamish & Jessie Wedding, Website">
+        </figure>
+        <p class="caption">Hamish & Jessie Wedding, Website</p>
+      </div>
+      <div class="grid-item" data-index="02">
+        <label class="open-label" for="preview-02"></label>
+        <label class="close-label" for="preview-reset"></label>
+        <figure>
+          <img src="./assets/coasters.jpg" alt="Hamish & Jessie Wedding, Coaster">
+        </figure>
+        <p class="caption">Hamish & Jessie Wedding, Coaster Invitations</p>
+      </div>
+      <div class="grid-item" data-index="03">
+        <label class="open-label" for="preview-03"></label>
+        <label class="close-label" for="preview-reset"></label>
+        <figure>
+          <img src="./assets/jjfarry.png" alt="JJ Farry, Website">
+        </figure>
+        <p class="caption">JJ Farry, Website</p>
+      </div>
+      <div class="grid-item" data-index="04">
+        <label class="open-label" for="preview-04"></label>
+        <label class="close-label" for="preview-reset"></label>
+        <figure>
+          <video src="./assets/htmlday2026.mov" autoplay muted loop playsinline></video>
+        </figure>
+        <p class="caption">HTML Day 2026, Event</p>
+      </div>
+      <div class="grid-item" data-index="05">
+        <label class="open-label" for="preview-05"></label>
+        <label class="close-label" for="preview-reset"></label>
+        <figure>
+          <img src="./assets/laserfoil.png" alt="Laserfoil, Website Refresh">
+        </figure>
+        <p class="caption">Laserfoil, Website Refresh</p>
+      </div>
+      <div class="grid-item" data-index="06">
+        <label class="open-label" for="preview-06"></label>
+        <label class="close-label" for="preview-reset"></label>
+        <figure>
+          <img src="./assets/scw_1.png" alt="Samantha Cheng, Website">
+        </figure>
+        <p class="caption">Samantha Cheng, Website</p>
+      </div>
+      <div class="grid-item" data-index="07">
+        <label class="open-label" for="preview-07"></label>
+        <label class="close-label" for="preview-reset"></label>
+        <figure>
+          <img src="./assets/vacantstorefront3.jpg" alt="Place Creative, Vacant Storefronts Project, Vinyl Wrap">
+        </figure>
+        <p class="caption">Place Creative, Vacant Storefronts Project, Vinyl Wrap</p>
+      </div>
+      <div class="grid-item" data-index="08">
+        <label class="open-label" for="preview-08"></label>
+        <label class="close-label" for="preview-reset"></label>
+        <figure>
+          <img src="./assets/spacestyler.png" alt="Space Styler, Website">
+        </figure>
+        <p class="caption">Space Styler, Website</p>
+      </div>
+      <div class="grid-item" data-index="09">
+        <label class="open-label" for="preview-09"></label>
+        <label class="close-label" for="preview-reset"></label>
+        <figure>
+          <img src="./assets/vacantstorefront4.jpg" alt="Place Creative, Vacant Storefronts Project, Vinyl Wrap">
+        </figure>
+        <p class="caption">Place Creative, Vacant Storefronts Project, Vinyl Wrap</p>
+      </div>
+      <div class="grid-item" data-index="10">
+        <label class="open-label" for="preview-10"></label>
+        <label class="close-label" for="preview-reset"></label>
+        <figure>
+          <img src="./assets/hyphenlogo.gif" alt="Hyphen, Logo">
+        </figure>
+        <p class="caption">Hyphen, Logo, Risograph Animation</p>
+      </div>
+      <div class="grid-item" data-index="11">
+        <label class="open-label" for="preview-11"></label>
+        <label class="close-label" for="preview-reset"></label>
+        <figure>
+          <img src="./assets/hyphen-reduced-pixels.gif" alt="Hyphen, Introductory Post, Risograph Animation">
+        </figure>
+        <p class="caption">Hyphen, Introductory Post, Risograph Animation</p>
+      </div>
+      <div class="grid-item" data-index="12">
+        <label class="open-label" for="preview-12"></label>
+        <label class="close-label" for="preview-reset"></label>
+        <figure>
+          <img src="./assets/linocutworkshop.jpg" alt="Linoprint Wrapping Paper, Workshop">
+        </figure>
+        <p class="caption">Linoprint Wrapping Paper, Workshop</p>
+      </div>
+      <div class="grid-item" data-index="13">
+        <label class="open-label" for="preview-13"></label>
+        <label class="close-label" for="preview-reset"></label>
+        <figure>
+          <img src="./assets/iceblock.png" alt="Iceblock, Branding & Website">
+        </figure>
+        <p class="caption">Iceblock, Branding & Website</p>
+      </div>
+      <div class="grid-item" data-index="14">
+        <label class="open-label" for="preview-14"></label>
+        <label class="close-label" for="preview-reset"></label>
+        <figure>
+          <img src="./assets/topinsta.png" alt="The Online Printer, Instagram Posts">
+        </figure>
+        <p class="caption">The Online Printer, Instagram Posts</p>
+      </div>
+      <div class="grid-item" data-index="15">
+        <label class="open-label" for="preview-15"></label>
+        <label class="close-label" for="preview-reset"></label>
+        <figure>
+          <img src="./assets/28points.gif" alt="28 Points, Publication Design">
+        </figure>
+        <p class="caption">28 Points, Publication Design</p>
+      </div>
+      <div class="grid-item" data-index="16">
+        <label class="open-label" for="preview-16"></label>
+        <label class="close-label" for="preview-reset"></label>
+        <figure>
+          <img src="./assets/28points-1.jpg" alt="28 Points, Publication Design">
+        </figure>
+        <p class="caption">28 Points, Publication Design</p>
+      </div>
+      <div class="grid-item" data-index="17">
+        <label class="open-label" for="preview-17"></label>
+        <label class="close-label" for="preview-reset"></label>
+        <figure>
+          <img src="./assets/28points-3.jpg" alt="28 Points, Publication Design">
+        </figure>
+        <p class="caption">28 Points, Publication Design</p>
+      </div>
+      <div class="grid-item" data-index="18">
+        <label class="open-label" for="preview-18"></label>
+        <label class="close-label" for="preview-reset"></label>
+        <figure>
+          <img src="./assets/LEVEL-11.gif" alt="Level11, Exhibition Website">
+        </figure>
+        <p class="caption">Level11, Exhibition Website</p>
+      </div>
+      <div class="grid-item" data-index="19">
+        <label class="open-label" for="preview-19"></label>
+        <label class="close-label" for="preview-reset"></label>
+        <figure>
+          <img src="./assets/LEVEL-12.gif" alt="Level11, Exhibition Website">
+        </figure>
+        <p class="caption">Level11, Exhibition Website</p>
+      </div>
+      <div class="grid-item" data-index="20">
+        <label class="open-label" for="preview-20"></label>
+        <label class="close-label" for="preview-reset"></label>
+        <figure>
+          <img src="./assets/macho (8).jpg" alt="(I wanna be a) macho man, Publication Design">
+        </figure>
+        <p class="caption">(I wanna be a) macho man, Publication Design</p>
+      </div>
+      <div class="grid-item" data-index="21">
+        <label class="open-label" for="preview-21"></label>
+        <label class="close-label" for="preview-reset"></label>
+        <figure>
+          <img src="./assets/macho (7).jpg" alt="(I wanna be a) macho man, Publication Design">
+        </figure>
+        <p class="caption">(I wanna be a) macho man, Publication Design</p>
+      </div>
+      <div class="grid-item" data-index="22">
+        <label class="open-label" for="preview-22"></label>
+        <label class="close-label" for="preview-reset"></label>
+        <figure>
+          <img src="./assets/anthems4theyouth.gif" alt="Anthemz for the youth, Experimental Website">
+        </figure>
+        <p class="caption">Anthemz 4 the youth, Experimental Website</p>
+      </div>
+      <div class="grid-item" data-index="23">
+        <label class="open-label" for="preview-23"></label>
+        <label class="close-label" for="preview-reset"></label>
+        <figure>
+          <img src="./assets/bit_1.jpg" alt="Belongings in Transit, Risograph Poster">
+        </figure>
+        <p class="caption">Belongings in Transit Exhibition, Risograph Poster</p>
+      </div>
+      <div class="grid-item" data-index="24">
+        <label class="open-label" for="preview-24"></label>
+        <label class="close-label" for="preview-reset"></label>
+        <figure>
+          <img src="./assets/filter1.gif" alt="WishyWashyWorld, Instagram Filter">
+        </figure>
+        <p class="caption">WishyWashyWorld, Instagram Filter</p>
+      </div>
+      <div class="grid-item" data-index="25">
+        <label class="open-label" for="preview-25"></label>
+        <label class="close-label" for="preview-reset"></label>
+        <figure>
+          <img src="./assets/filter2.gif" alt="WishyWashyWorld, Instagram Filter">
+        </figure>
+        <p class="caption">WishyWashyWorld, Instagram Filter</p>
+      </div>
+      <div class="grid-item" data-index="26">
+        <label class="open-label" for="preview-26"></label>
+        <label class="close-label" for="preview-reset"></label>
+        <figure>
+          <img src="./assets/wishywashyworld.gif" alt="WishyWashyWorld, Experimental Website">
+        </figure>
+        <p class="caption">WishyWashyWorld, Experimental Website</p>
+      </div>
+      <div class="grid-item" data-index="27">
+        <label class="open-label" for="preview-27"></label>
+        <label class="close-label" for="preview-reset"></label>
+        <figure>
+          <img src="./assets/Spread_2.jpg" alt="Year 11 Science Guide, Publication Design">
+        </figure>
+        <p class="caption">Year 11 Science Guide, Publication Design</p>
+      </div>
+      <div class="grid-item" data-index="28">
+        <label class="open-label" for="preview-28"></label>
+        <label class="close-label" for="preview-reset"></label>
+        <figure>
+          <img src="./assets/Spread_6.jpg" alt="Year 11 Science Guide, Publication Design">
+        </figure>
+        <p class="caption">Year 11 Science Guide, Publication Design</p>
       </div>
 
-      <div class="sw-page-2-images">
-        <p>INSTALLATION</p>
-        <div class="sw-page-2-images--1">
-          <a href="./assets/vacantstorefront3.jpg" data-lightbox="vacantstore"> <img src= "./assets/vacantstorefront3.jpg";></a>
-        </div>
-        <div class="sw-page-2-images--2">
-          <a href="./assets/vacantstorefront4.jpg" data-lightbox="vacantstore"> <img src= "./assets/vacantstorefront4.jpg";></a>
-        </div>
+      <div class="grid-item" data-index="30">
+        <label class="open-label" for="preview-30"></label>
+        <label class="close-label" for="preview-reset"></label>
+        <figure>
+          <img src="./assets/centralpotluck.jpg" alt="Hyphen, Central Potluck Event">
+        </figure>
+        <p class="caption">Hyphen, Central Potluck Event</p>
       </div>
+      <div class="grid-item" data-index="31">
+        <label class="open-label" for="preview-31"></label>
+        <label class="close-label" for="preview-reset"></label>
+        <figure>
+          <img src="./assets/hyphentakeaways.JPEG" alt="Hyphen, Potluck Events Poster">
+        </figure>
+        <p class="caption">Hyphen, Potluck Events Poster</p>
+      </div>
+      <div class="grid-item" data-index="32">
+        <label class="open-label" for="preview-32"></label>
+        <label class="close-label" for="preview-reset"></label>
+        <figure>
+          <img src="./assets/risowrapping.jpg" alt="Risograph Wrapping Paper">
+        </figure>
+        <p class="caption">Risograph Wrapping Paper</p>
+      </div>
+
+      </div>
+
+      <aside class="preview-panel" id="previewPanel">
+      <div class="preview-item" data-slot="reset">
+        <figure class="preview-figure"></figure>
+        <p class="preview-caption"></p>
+      </div>
+      <div class="preview-item" data-slot="01">
+        <figure class="preview-figure">
+          <video src="./assets/hamishjessie.mp4" autoplay muted loop playsinline></video>
+        </figure>
+        <p class="preview-caption">Hamish & Jessie Wedding, Website</p>
+      </div>
+      <div class="preview-item" data-slot="02">
+        <figure class="preview-figure">
+          <img src="./assets/coasters.jpg" alt="Hamish & Jessie Wedding, Coaster">
+        </figure>
+        <p class="preview-caption">Hamish & Jessie Wedding, Coaster Invitations</p>
+      </div>
+      <div class="preview-item" data-slot="03">
+        <figure class="preview-figure">
+          <video src="./assets/jjfarry.com.mp4" autoplay muted loop playsinline></video>
+        </figure>
+        <p class="preview-caption">JJ Farry, Website</p>
+      </div>
+      <div class="preview-item" data-slot="04">
+        <figure class="preview-figure">
+          <video src="./assets/htmlday2026.mov" autoplay muted loop playsinline></video>
+        </figure>
+        <p class="preview-caption">HTML Day 2026, Event</p>
+      </div>
+      <div class="preview-item" data-slot="05">
+        <figure class="preview-figure">
+          <video src="./assets/laserfoil.mp4" autoplay muted loop playsinline></video>
+        </figure>
+        <p class="preview-caption">Laserfoil, Website Refresh</p>
+      </div>
+      <div class="preview-item" data-slot="06">
+        <figure class="preview-figure">
+          <video src="./assets/scw_4.mp4" autoplay muted loop playsinline></video>
+        </figure>
+        <p class="preview-caption">Samantha Cheng, Website</p>
+      </div>
+      <div class="preview-item" data-slot="07">
+        <figure class="preview-figure">
+          <img src="./assets/vacantstorefront3.jpg" alt="Place Creative, Vacant Storefronts Project, Vinyl Wrap">
+        </figure>
+        <p class="preview-caption">Place Creative, Vacant Storefronts Project, Vinyl Wrap</p>
+      </div>
+      <div class="preview-item" data-slot="08">
+        <figure class="preview-figure">
+          <video src="./assets/spacestyler.mp4" autoplay muted loop playsinline></video>
+        </figure>
+        <p class="preview-caption">SpaceStyler, Website</p>
+      </div>
+      <div class="preview-item" data-slot="09">
+        <figure class="preview-figure">
+          <img src="./assets/vacantstorefront4.jpg" alt="Place Creative, Vacant Storefronts Project, Vinyl Wrap">
+        </figure>
+        <p class="preview-caption">Place Creative, Vacant Storefronts Project, Vinyl Wrap</p>
+      </div>
+      <div class="preview-item" data-slot="10">
+        <figure class="preview-figure">
+          <img src="./assets/hyphenlogo.gif" alt="Hyphen, Logo">
+        </figure>
+        <p class="preview-caption">Hyphen, Logo, Risograph Animation</p>
+      </div>
+      <div class="preview-item" data-slot="11">
+        <figure class="preview-figure">
+          <img src="./assets/hyphen-reduced-pixels.gif" alt="Hyphen, Introductory Post, Risograph Animation">
+        </figure>
+        <p class="preview-caption">Hyphen, Introductory Post, Risograph Animation</p>
+      </div>
+      <div class="preview-item" data-slot="12">
+        <figure class="preview-figure">
+          <img src="./assets/linocutworkshop.jpg" alt="Linoprint Wrapping Paper, Workshop">
+        </figure>
+        <p class="preview-caption">Linoprint Wrapping Paper, Workshop</p>
+      </div>
+      <div class="preview-item" data-slot="13">
+        <figure class="preview-figure">
+          <video src="./assets/iceblock.mp4" autoplay muted loop playsinline></video>
+        </figure>
+        <p class="preview-caption">Iceblock, Branding, Website</p>
+      </div>
+      <div class="preview-item" data-slot="14">
+        <figure class="preview-figure">
+          <img src="./assets/topinsta.png" alt="The Online Printer, Instagram Posts">
+        </figure>
+        <p class="preview-caption">The Online Printer, Instagram Posts</p>
+      </div>
+      <div class="preview-item" data-slot="15">
+        <figure class="preview-figure">
+          <img src="./assets/28points.gif" alt="28 Points, Publication Design">
+        </figure>
+        <p class="preview-caption">28 Points, Publication Design</p>
+      </div>
+      <div class="preview-item" data-slot="16">
+        <figure class="preview-figure">
+          <img src="./assets/28points-1.jpg" alt="28 Points, Publication Design">
+        </figure>
+        <p class="preview-caption">28 Points, Publication Design</p>
+      </div>
+      <div class="preview-item" data-slot="17">
+        <figure class="preview-figure">
+          <img src="./assets/28points-3.jpg" alt="28 Points, Publication Design">
+        </figure>
+        <p class="preview-caption">28 Points, Publication Design</p>
+      </div>
+      <div class="preview-item" data-slot="18">
+        <figure class="preview-figure">
+          <img src="./assets/LEVEL-11.gif" alt="Level1, Exhibition Website">
+        </figure>
+        <p class="preview-caption">Level11, Exhibition Website</p>
+      </div>
+      <div class="preview-item" data-slot="19">
+        <figure class="preview-figure">
+          <img src="./assets/LEVEL-12.gif" alt="Level11, Exhibition Website">
+        </figure>
+        <p class="preview-caption">Level11, Exhibition Website</p>
+      </div>
+      <div class="preview-item" data-slot="20">
+        <figure class="preview-figure">
+          <img src="./assets/macho (8).jpg" alt="(I wanna be a) macho man, Publication Design">
+        </figure>
+        <p class="preview-caption">(I wanna be a) macho man, Publication Design</p>
+      </div>
+      <div class="preview-item" data-slot="21">
+        <figure class="preview-figure">
+          <img src="./assets/macho (7).jpg" alt="(I wanna be a) macho man, Publication Design">
+        </figure>
+        <p class="preview-caption">I wanna be a) macho man, Publication Design</p>
+      </div>
+      <div class="preview-item" data-slot="22">
+        <figure class="preview-figure">
+          <img src="./assets/anthems4theyouth.gif" alt="Anthemz for the youth, Experimental Website">
+        </figure>
+        <p class="preview-caption">Anthemz 4 the youth, Experimental Website</p>
+      </div>
+      <div class="preview-item" data-slot="23">
+        <figure class="preview-figure">
+          <img src="./assets/bit_1.jpg" alt="Belongings in Transit, Exhibition Poster">
+        </figure>
+        <p class="preview-caption">Belongings in Transit Exhibition, Risograph Poster</p>
+      </div>
+      <div class="preview-item" data-slot="24">
+        <figure class="preview-figure">
+          <img src="./assets/filter1.gif" alt="WishyWashyWorld, Instagram Filter">
+        </figure>
+        <p class="preview-caption">WishyWashyWorld, Instagram Filter</p>
+      </div>
+      <div class="preview-item" data-slot="25">
+        <figure class="preview-figure">
+          <img src="./assets/filter2.gif" alt="WishyWashyWorld, Instagram Filter">
+        </figure>
+        <p class="preview-caption">WishyWashyWorld, Instagram Filter</p>
+      </div>
+      <div class="preview-item" data-slot="26">
+        <figure class="preview-figure">
+          <img src="./assets/wishywashyworld.gif" alt="WishyWashyWorld, Experimental Website">
+        </figure>
+        <p class="preview-caption">WishyWashyWorld, Experimental Website</p>
+      </div>
+      <div class="preview-item" data-slot="27">
+        <figure class="preview-figure">
+          <img src="./assets/Spread_2.jpg" alt="Year 11 Science Guide, Publication Design">
+        </figure>
+        <p class="preview-caption">Year 11 Science Guide, Publication Design</p>
+      </div>
+      <div class="preview-item" data-slot="28">
+        <figure class="preview-figure">
+          <img src="./assets/Spread_6.jpg" alt="Year 11 Science Guide, Publication Design">
+        </figure>
+        <p class="preview-caption">Year 11 Science Guide, Publication Design</p>
+      </div>
+
+      <div class="preview-item" data-slot="30">
+        <figure class="preview-figure">
+          <img src="./assets/centralpotluck.jpg" alt="Hyphen, Central Potluck">
+        </figure>
+        <p class="preview-caption">Hyphen, Central Potluck Event</p>
+      </div>
+      <div class="preview-item" data-slot="31">
+        <figure class="preview-figure">
+          <img src="./assets/hyphentakeaways.JPEG" alt="Hyphen, Potluck Events Poster">
+        </figure>
+        <p class="preview-caption">Hyphen, Potluck Events Poster</p>
+      </div>
+      <div class="preview-item" data-slot="32">
+        <figure class="preview-figure">
+          <img src="./assets/risowrapping.jpg" alt="Risograph Wrapping Paper">
+        </figure>
+        <p class="preview-caption">Risograph Wrapping Paper</p>
+      </div>
+
+      </aside>
     </div>
+  </main>
 
-      <div class="sw-page-2-container">
-        <div class="sw-page-2-info">
-          <p>28 POINTS, 2020</p>
-            <div class="sw-page-2-description">
-              <p style="font-style: italic"> 194x267mm, 120 pages.</p>
-            </div>
-              <br>
-              <a href="./assets/Sophia.jpg" data-lightbox="28points"> <img src= "./assets/Sophia.jpg";></a>
-      </div>
-
-      <div class="sw-page-2-images">
-        <p>PUBLICATION</p>
-        <div class="sw-page-2-images--1">
-          <a href="./assets/28points.gif" data-lightbox="28points"> <img src= "./assets/28points.gif";></a>
-        </div>
-        <div class="sw-page-2-images--2">
-          <a href="./assets/Sophia-2.jpg" data-lightbox="28points"> <img src= "./assets/Sophia-2.jpg";></a>
-        </div>
-      </div>
-    </div>
-
-    <div class="sw-page-2-container">
-        <div class="sw-page-2-info">
-          <p> LEVEL 11, 2020  </p>
-            <div class="sw-page-2-description">
-              <p style="font-style: italic"> Website for Whitecliffe YR3 Grphic Design EOY exhibitions. </p>
-            </div>
-        </div>
-      <div class="sw-page-2-images">
-          <p>SITE DESIGN</p>
-          <a href="./assets/LEVEL-11.gif" data-lightbox="LVL"> <img src= "./assets/LEVEL-11.gif";></a>
-          <a href="./assets/LEVEL-12.gif" data-lightbox="LVL"> <img src= "./assets/LEVEL-12.gif";></a>
-      </div>
-    </div>
-
-      <div class="sw-page-2-container">
-        <div class="sw-page-2-info">
-          <p>(I WANNA BE A) MACHO MAN, 2020</p>
-            <div class="sw-page-2-description">
-              <p style="font-style: italic">170x240mm, 176 pages.</p>
-            </div>
-              <br>
-              <a href="./assets/ (1).jpg" data-lightbox="macho"> <img src= "./assets/macho (1).jpg";></a>
-          </div>
-
-        <div class="sw-page-2-images">
-          <p>PUBLICATION</p>
-          <div class="sw-page-2-images--1">
-            <a href="./assets/macho (2).jpg" data-lightbox="macho"> <img src= "./assets/macho (2).jpg";></a>
-          </div>
-          <div class="sw-page-2-images--2">
-            <a href="./assets/macho (3).jpg" data-lightbox="macho"> <img src= "./assets/macho (3).jpg";></a>
-          </div>
-        </div>
-        <div class="sw-page-2-images">
-          <div class="sw-page-2-images--1">
-            <a href="./assets/macho (7).jpg" data-lightbox="macho"> <img src= "./assets/macho (7).jpg";></a>
-          </div>
-          <div class="sw-page-2-images--2">
-            <a href="./assets/macho (8).jpg" data-lightbox="macho"> <img src= "./assets/macho (8).jpg";></a>
-          </div>
-        </div>
-      </div>
-
-
-        <div class="sw-page-2-container">
-          <div class="sw-page-2-info">
-            <p> ANTHEMZFORTHEYOUTH, 2020  </p>
-              <div class="sw-page-2-description">
-                <p style="font-style: italic"> An exploration of growing up in Auckland suburbs. </p>
-              </div>
-            </div>
-          <div class="sw-page-2-images">
-            <p>SITE DESIGN</p>
-            <a href="./assets/anthems4theyouth.gif" data-lightbox="anthem"> <img src= "./assets/anthems4theyouth.gif";></a>
-          </div>
-        </div>
-
-        <div class="sw-page-2-container">
-          <div class="sw-page-2-info">
-            BELONGINGS IN TRANSIT, 2020 <br>
-              <div class="sw-page-2-description">
-              <p style="font-style: italic"> A3 Risograph series for two migrant artists, <a href="https://jaeeajgaonkar.myportfolio.com/">Jaee Ajgaonkar</a> & <a href="https://anacgarciaartist.wixsite.com/acgartist">Ana Carmela Garcia</a>. </p>
-              </div>
-              <br>
-          </div>
-
-          <div class="sw-page-2-images">
-            <p>EXHIBITION IDENTITY</p>
-            <div class="sw-page-2-images--1">
-            <a href="./assets/bit_1.jpg" data-lightbox="bit"> <img src= "./assets/bit_1.jpg";> </a>
-          </div>
-          <div class="sw-page-2-images--2">
-          <a href="./assets/bit_2.jpg" data-lightbox="bit"> <img src= "./assets/bit_2.jpg";> </a>
-          </div>
-          </div>
-        </div>
-
-          <div class="sw-page-2-container">
-            <div class="sw-page-2-info">
-              <p> <a href="http://wishywashyworld.stuffmov.es/"> WISHYWASHY FILTERS</a>, 2019 <br>
-                <div class="sw-page-2-description">
-                  <p style="font-style: italic">Instagram filters in collaboration with artist <a href="https://www.freyaburnett.net/">Freya Burnett.</a> Spark AR.</p>
-                </div>
-                <br>
-                <a href="https://www.instagram.com/ar/1024870367843923/"> <img width="50px" src= "./assets/thumbnail1.png";> <br> wishywashyfishies </a> <br>
-                <a href="https://www.instagram.com/ar/409140193350646"> <img width="50px" src= "./assets/thumbnail.png";> <br> wishywashyhearts </a>
-              </div>
-            <div class="sw-page-2-images">
-              <p>INSTAGRAM FILTER</p>
-              <div class="sw-page-2-images--1">
-                <a href="./assets/filter1.gif" data-lightbox="filter"> <img src= "./assets/filter1.gif";> </a>
-              </div>
-              <div class="sw-page-2-images--2">
-                <a href="./assets/filter2.gif" data-lightbox="filter"> <img src= "./assets/filter2.gif";> </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="sw-page-2-container">
-            <div class="sw-page-2-info">
-              <p> <a href="http://wishywashyworld.stuffmov.es/"> WISHYWASHYWORLD</a>, 2019 <br>
-                <div class="sw-page-2-description">
-                  <p style="font-style: italic">Storybook in collaboration with artist <a href="https://www.freyaburnett.net/">Freya Burnett. </a></p>
-                </div>
-                <br>
-                <img width="100px" src= "./assets/pinkwhitestripes.gif";>
-              </div>
-            <div class="sw-page-2-images">
-              <p>SITE DESIGN</p>
-              <a href="./assets/wishywashyworld.gif" data-lightbox="www"> <img src= "./assets/wishywashyworld.gif";> </a>
-            </div>
-          </div>
-
-            <div class="sw-page-2-container">
-              <div class="sw-page-2-info">
-                ACME STANDARDS MANUAL, 2019 <br>
-                  <div class="sw-page-2-description">
-                    <p style="font-style: italic"> 210x297mm, ringbinder.</p>
-                    <br>
-                  </div>
-                </div>
-              <div class="sw-page-2-images">
-                STANDARDS MANUAL
-                <a href="./assets/acme1.jpg" data-lightbox="acme"> <img src= "./assets/acme1.jpg";> </a>
-                <a href="./assets/acme.jpg" data-lightbox="acme"> <img src= "./assets/acme.jpg";> </a>
-              </div>
-            </div>
-
-              <div class="sw-page-2-container">
-                <div class="sw-page-2-info">
-                  YEAR 11 SCIENCE GUIDE, 2019 <br>
-                    <div class="sw-page-2-description">
-                      <p style="font-style: italic">210x297mm, newsprint.</p>
-                      <br><br>
-                      <a href="./assets/Cover.jpg" data-lightbox="science"> <img src= "./assets/Cover.jpg";> </a>
-                    </div>
-                  </div>
-                <div class="sw-page-2-images">
-                  <p>GRID DESIGN</p>
-                  <div class="sw-page-2-images--1">
-                    <a href="./assets/Spread_1.jpg" data-lightbox="science"> <img src= "./assets/Spread_1.jpg";> </a>
-                  </div>
-                  <div class="sw-page-2-images--2">
-                    <a href="./assets/Spread_2.jpg" data-lightbox="science"><img src= "./assets/Spread_2.jpg";> </a>
-                  </div>
-                </div>
-                <div class="sw-page-2-images">
-                  <div class="sw-page-2-images--1">
-                    <a href="./assets/Spread_3.jpg" data-lightbox="science"><img src= "./assets/Spread_3.jpg";> </a>
-                  </div>
-                  <div class="sw-page-2-images--2">
-                    <a href="./assets/Spread_4.jpg" data-lightbox="science"><img src= "./assets/Spread_4.jpg";> </a>
-                  </div>
-                </div>
-
-
-  </div>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="./js/portfolio.js"></script>
-  <script src="./js/lightbox.js"></script>
+</div>
+</body>
+</html>
 
 </body>
 </html>

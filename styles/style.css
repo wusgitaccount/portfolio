@@ -1,9 +1,35 @@
 @import url("https://fonts.googleapis.com/css?family=Courier Prime");
-body{
+body {
   overflow-x: hidden;
   font-family: Arial, Helvetica, sans-serif;
-background-color: aliceblue;
+  /* background-color removed from here */
 }
+
+body.themed-page {
+  background-color: aliceblue;
+}
+
+body.themed-page::-webkit-scrollbar {
+  width: 70px;
+  height: 30px;
+}
+
+body.themed-page::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 10px rgb(94, 57, 255);
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+
+body.themed-page::-webkit-scrollbar-thumb {
+  background: rgb(120, 37, 37);
+  border-radius: 25px;
+}
+
+body.themed-page::-webkit-scrollbar-thumb:hover {
+  background: #b30000;
+}
+
+/* party4u body */
 #body{
     position: relative;
     height: 3000px;
@@ -21,27 +47,7 @@ background-color: aliceblue;
     width: 177.78vh;
   }
 }
-::-webkit-scrollbar {
-  width: 70px;
-  height: 30px;
-}
 
-/* Track */
-::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 10px rgb(94, 57, 255); 
-  border-top-left-radius: 25px;
-  border-bottom-left-radius: 25px;}
- 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: rgb(120, 37, 37); 
-  border-radius: 25px;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #b30000; 
-}
 
 .asz-wrapper{
   width: 100%;
@@ -66,17 +72,17 @@ background-color: aliceblue;
   border-radius: 15px;
   transition: 1s ease-in-out;
   font-size: 12px;
-    line-height: 1.5;
+  line-height: 1.5;
 }
+
 .asz-title:hover {
     border-width: 5px;
-
 }
 
 /* When toggled */
 #toggle-height:checked + .asz-title-toggle .asz-title {
-  height: 220px; /* or any desired value */
-  overflow: hidden; /* Hide the overflow */
+  height: 220px; 
+  overflow: hidden; 
 }
 
 .asz-container{
@@ -86,9 +92,8 @@ background-color: aliceblue;
   position: absolute;
   z-index:-10;
   overflow: hidden; 
-  
+  float: right;
 }
-
 
 .asz-section img {
   max-width: 30%;
@@ -195,77 +200,6 @@ background-color: aliceblue;
   }
 }
 
-.sw-page {
-  width: 100%;
-  position:relative;
-  font-family: serif;
-  font-size: 12px;
-  line-height: 1.5;
-}
-
-.sw-page-2-container {
-  width: 70%;
-  float: right;
-  padding: 3%;
-  z-index: 100000;
-  position: relative;
-}
-
-.sw-page-2-info{
-  width: 30%;
-  float: left;
-  overflow: hidden;
-  position: sticky;
-  top: 0;  
-  margin-left: 2.5%;
-}
-
-.sw-page-2-images{
-  width: 65%;
-  float: left;
-  overflow: hidden;
-  margin-left: 2.5%;
-}
-
-
-.sw-page-2-container img {
-    max-width: 100%;
-    height: auto;
-}
-
-.sw-page-2-images--1{
-  width: 48%;
-  float: left;
-  overflow: hidden;
-}
-.sw-page-2-images--2{
-  width: 48%;
-  float: right;
-  overflow: hidden;
-}
-
-@media screen and (max-width: 700px) {
-  .sw-page{
-  flex-direction:column;
-  }
-
-  .sw-page-2-container{
-    width: 100%;
-    flex-direction:column;
-    float: left;
-  }
-  .sw-page-2-info{
-    width: 100%;
-    }
-  .sw-page-2-images{
-    width: 100%;
-    }
-  
-  .sw-page-2-images--1, .sw-page-2-images--2 img {
-    max-width: 100%;
-    height: auto;
-  }
-}
 
 
 /* party4u styles */
@@ -301,6 +235,7 @@ background-color: aliceblue;
   font-size: 2em;
   line-height: 1.5;
 }
+
 /* akiki's 30th birthday styles */
 
 .body-30 {
@@ -383,7 +318,7 @@ background-color: aliceblue;
   border-radius: 12px;
   box-sizing: border-box;
   background: #BEE;
-background: linear-gradient(180deg, rgba(187, 238, 238, 1) 0%, rgba(255, 255, 255, 1) 100%);
+  background: linear-gradient(180deg, rgba(187, 238, 238, 1) 0%, rgba(255, 255, 255, 1) 100%);
 }
 
 /* tighten spacing on small screens */
@@ -397,3 +332,824 @@ background: linear-gradient(180deg, rgba(187, 238, 238, 1) 0%, rgba(255, 255, 25
 }
 
 
+/* styles for project library page */
+
+:root {
+  --bg: #ffffff;
+  --ink: #111111;
+  --muted: #6f6f6f;
+  --line: #e2e2e2;
+  --gap: 1px;
+  --header-h: 64px;
+  --serif: 'Newsreader', Georgia, serif;
+  --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+}
+.lib-wrapper {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: var(--bg);
+}
+
+.lib-wrapper a { color: inherit; text-decoration: none; }
+.lib-wrapper a:hover { opacity: 0.6; }
+
+/* ---------- HEADER ---------- */
+
+.lib-header {
+
+  top: 0;
+  z-index: 50;
+  display: grid;
+  grid-template-columns: 1fr 1.3fr auto;
+  align-items: start;
+  gap: 24px;
+  padding: 20px 32px;
+  background: var(--bg);
+  border-bottom: 1px solid var(--line);
+}
+
+
+.enquiries {
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--muted);
+  max-width: 360px;
+}
+
+.label {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin-bottom: 2px;
+}
+
+.enquiries a {
+  display: block;
+  color: var(--ink);
+}
+
+.enquiries .tagline {
+  margin: 8px 0 0;
+}
+
+.main-nav {
+  display: flex;
+  gap: 18px;
+  font-size: 13px;
+  white-space: nowrap;
+  justify-self: end;
+}
+
+.main-nav .active {
+  color: var(--muted);
+}
+
+/* ---------- LIBRARY HEADING ---------- */
+
+main {
+  padding: 0 32px;
+  background: var(--bg);
+}
+
+.lib-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 56px 0 24px;
+}
+
+.lib-heading .counter {
+  font-family: var(--sans);
+  font-size: 13px;
+  color: var(--muted);
+  letter-spacing: 0.02em;
+  position: sticky;
+  top: calc(var(--header-h) + 12px);
+}
+
+
+/* ---------- LAYOUT: grid (50%) + preview panel (50%) ---------- */
+/* The split is permanent — present from first load, not animated in on click. */
+ 
+.archive-layout {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  position: relative;
+}
+ 
+/* Hidden radio inputs drive the whole interaction — one shared group means
+   selecting a new item automatically deselects the previous one natively. */
+.preview-radio {
+  position: fixed;
+  opacity: 0;
+  pointer-events: none;
+  width: 0;
+  height: 0;
+}
+ 
+/* ---------- GRID ---------- */
+/* Captions sit at the top of each cell at all times.
+   Each figure reserves its full height (via inline aspect-ratio)
+   at all times, so toggling hover/click never reflows the grid.
+   Only the image's opacity/visibility changes. */
+ 
+.archive-grid {
+  flex: 0 0 50%;
+  max-width: 50%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  padding-bottom: 64px;
+}
+ 
+.grid-item {
+  position: relative;
+  break-inside: avoid;
+  margin-bottom: 28px;
+  cursor: pointer;
+}
+ 
+/* Two stacked invisible labels per item: clicking the first time hits
+   .open-label (checks this item's radio); clicking again hits .close-label
+   (checks the shared reset radio), which has swapped to the top via
+   pointer-events once this item is active. Pure CSS toggle, no JS. */
+.open-label,
+.close-label {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  cursor: pointer;
+}
+ 
+.close-label {
+  pointer-events: none;
+}
+ 
+.caption {
+  position: relative;
+  z-index: 0;
+  margin: 8px 2px 0;
+  font-size: 12.5px;
+  line-height: 1.45;
+  color: var(--ink);
+  max-width: 34ch;
+}
+ 
+.grid-item figure {
+  position: relative;
+  z-index: 0;
+  margin: 0;
+  width: 100%;
+  overflow: hidden;
+  background: #f1f1f1;
+  opacity: 0;
+  transition: opacity 0.25s ease 1s;
+}
+
+.grid-item figure img,
+.grid-item figure video,
+.preview-figure img,
+.preview-figure video {
+  width: 100%;
+  max-height: 50%;
+  object-fit: cover;
+  display: block;
+}
+ 
+/* Hover preview — works regardless of whether another item is locked open */
+.archive-grid .grid-item:hover figure {
+  opacity: 1;
+  transition: opacity 0.25s ease; /* no delay fading IN */
+}
+ 
+/* Locked open via click — shows only in the side panel, not in the grid item */
+#preview-01:checked ~ .preview-panel .preview-item[data-slot="01"] {
+  opacity: 1;
+}
+ 
+#preview-02:checked ~ .preview-panel .preview-item[data-slot="02"] {
+  opacity: 1;
+}
+ 
+#preview-03:checked ~ .preview-panel .preview-item[data-slot="03"] {
+  opacity: 1;
+}
+ 
+#preview-04:checked ~ .preview-panel .preview-item[data-slot="04"] {
+  opacity: 1;
+}
+ 
+#preview-05:checked ~ .preview-panel .preview-item[data-slot="05"] {
+  opacity: 1;
+}
+ 
+#preview-06:checked ~ .preview-panel .preview-item[data-slot="06"] {
+  opacity: 1;
+}
+ 
+#preview-07:checked ~ .preview-panel .preview-item[data-slot="07"] {
+  opacity: 1;
+}
+ 
+#preview-08:checked ~ .preview-panel .preview-item[data-slot="08"] {
+  opacity: 1;
+}
+ 
+#preview-09:checked ~ .preview-panel .preview-item[data-slot="09"] {
+  opacity: 1;
+}
+ 
+#preview-10:checked ~ .preview-panel .preview-item[data-slot="10"] {
+  opacity: 1;
+}
+ 
+#preview-11:checked ~ .preview-panel .preview-item[data-slot="11"] {
+  opacity: 1;
+}
+ 
+#preview-12:checked ~ .preview-panel .preview-item[data-slot="12"] {
+  opacity: 1;
+}
+ 
+#preview-13:checked ~ .preview-panel .preview-item[data-slot="13"] {
+  opacity: 1;
+}
+ 
+#preview-14:checked ~ .preview-panel .preview-item[data-slot="14"] {
+  opacity: 1;
+}
+ 
+#preview-15:checked ~ .preview-panel .preview-item[data-slot="15"] {
+  opacity: 1;
+}
+ 
+#preview-16:checked ~ .preview-panel .preview-item[data-slot="16"] {
+  opacity: 1;
+}
+ 
+#preview-17:checked ~ .preview-panel .preview-item[data-slot="17"] {
+  opacity: 1;
+}
+ 
+#preview-18:checked ~ .preview-panel .preview-item[data-slot="18"] {
+  opacity: 1;
+}
+ 
+#preview-19:checked ~ .preview-panel .preview-item[data-slot="19"] {
+  opacity: 1;
+}
+ 
+#preview-20:checked ~ .preview-panel .preview-item[data-slot="20"] {
+  opacity: 1;
+}
+ 
+#preview-21:checked ~ .preview-panel .preview-item[data-slot="21"] {
+  opacity: 1;
+}
+ 
+#preview-22:checked ~ .preview-panel .preview-item[data-slot="22"] {
+  opacity: 1;
+}
+ 
+#preview-23:checked ~ .preview-panel .preview-item[data-slot="23"] {
+  opacity: 1;
+}
+ 
+#preview-24:checked ~ .preview-panel .preview-item[data-slot="24"] {
+  opacity: 1;
+}
+ 
+#preview-25:checked ~ .preview-panel .preview-item[data-slot="25"] {
+  opacity: 1;
+}
+ 
+#preview-26:checked ~ .preview-panel .preview-item[data-slot="26"] {
+  opacity: 1;
+}
+ 
+#preview-27:checked ~ .preview-panel .preview-item[data-slot="27"] {
+  opacity: 1;
+}
+ 
+#preview-28:checked ~ .preview-panel .preview-item[data-slot="28"] {
+  opacity: 1;
+}
+ 
+#preview-29:checked ~ .preview-panel .preview-item[data-slot="29"] {
+  opacity: 1;
+}
+ 
+#preview-30:checked ~ .preview-panel .preview-item[data-slot="30"] {
+  opacity: 1;
+}
+ 
+#preview-31:checked ~ .preview-panel .preview-item[data-slot="31"] {
+  opacity: 1;
+}
+ 
+#preview-32:checked ~ .preview-panel .preview-item[data-slot="32"] {
+  opacity: 1;
+}
+ 
+#preview-33:checked ~ .preview-panel .preview-item[data-slot="33"] {
+  opacity: 1;
+}
+ 
+#preview-34:checked ~ .preview-panel .preview-item[data-slot="34"] {
+  opacity: 1;
+}
+ 
+#preview-35:checked ~ .preview-panel .preview-item[data-slot="35"] {
+  opacity: 1;
+}
+ 
+#preview-36:checked ~ .preview-panel .preview-item[data-slot="36"] {
+  opacity: 1;
+}
+ 
+#preview-37:checked ~ .preview-panel .preview-item[data-slot="37"] {
+  opacity: 1;
+}
+ 
+#preview-38:checked ~ .preview-panel .preview-item[data-slot="38"] {
+  opacity: 1;
+}
+ 
+#preview-39:checked ~ .preview-panel .preview-item[data-slot="39"] {
+  opacity: 1;
+}
+ 
+#preview-40:checked ~ .preview-panel .preview-item[data-slot="40"] {
+  opacity: 1;
+}
+ 
+#preview-41:checked ~ .preview-panel .preview-item[data-slot="41"] {
+  opacity: 1;
+}
+ 
+#preview-42:checked ~ .preview-panel .preview-item[data-slot="42"] {
+  opacity: 1;
+}
+ 
+#preview-43:checked ~ .preview-panel .preview-item[data-slot="43"] {
+  opacity: 1;
+}
+ 
+#preview-44:checked ~ .preview-panel .preview-item[data-slot="44"] {
+  opacity: 1;
+}
+ 
+#preview-45:checked ~ .preview-panel .preview-item[data-slot="45"] {
+  opacity: 1;
+}
+ 
+#preview-46:checked ~ .preview-panel .preview-item[data-slot="46"] {
+  opacity: 1;
+}
+ 
+#preview-47:checked ~ .preview-panel .preview-item[data-slot="47"] {
+  opacity: 1;
+}
+ 
+#preview-48:checked ~ .preview-panel .preview-item[data-slot="48"] {
+  opacity: 1;
+}
+ 
+#preview-49:checked ~ .preview-panel .preview-item[data-slot="49"] {
+  opacity: 1;
+}
+ 
+#preview-50:checked ~ .preview-panel .preview-item[data-slot="50"] {
+  opacity: 1;
+}
+ 
+#preview-51:checked ~ .preview-panel .preview-item[data-slot="51"] {
+  opacity: 1;
+}
+ 
+#preview-52:checked ~ .preview-panel .preview-item[data-slot="52"] {
+  opacity: 1;
+}
+ 
+#preview-53:checked ~ .preview-panel .preview-item[data-slot="53"] {
+  opacity: 1;
+}
+ 
+#preview-54:checked ~ .preview-panel .preview-item[data-slot="54"] {
+  opacity: 1;
+}
+ 
+#preview-55:checked ~ .preview-panel .preview-item[data-slot="55"] {
+  opacity: 1;
+}
+ 
+#preview-56:checked ~ .preview-panel .preview-item[data-slot="56"] {
+  opacity: 1;
+}
+ 
+/* Bold caption + label swap on the active item */
+#preview-01:checked ~ .archive-grid .grid-item[data-index="01"] .caption {
+  font-weight: 500;
+}
+#preview-01:checked ~ .archive-grid .grid-item[data-index="01"] .open-label {
+  pointer-events: none;
+}
+#preview-01:checked ~ .archive-grid .grid-item[data-index="01"] .close-label {
+  pointer-events: auto;
+}
+ 
+#preview-02:checked ~ .archive-grid .grid-item[data-index="02"] .caption {
+  font-weight: 500;
+}
+#preview-02:checked ~ .archive-grid .grid-item[data-index="02"] .open-label {
+  pointer-events: none;
+}
+#preview-02:checked ~ .archive-grid .grid-item[data-index="02"] .close-label {
+  pointer-events: auto;
+}
+ 
+#preview-03:checked ~ .archive-grid .grid-item[data-index="03"] .caption {
+  font-weight: 500;
+}
+#preview-03:checked ~ .archive-grid .grid-item[data-index="03"] .open-label {
+  pointer-events: none;
+}
+#preview-03:checked ~ .archive-grid .grid-item[data-index="03"] .close-label {
+  pointer-events: auto;
+}
+ 
+#preview-04:checked ~ .archive-grid .grid-item[data-index="04"] .caption {
+  font-weight: 500;
+}
+#preview-04:checked ~ .archive-grid .grid-item[data-index="04"] .open-label {
+  pointer-events: none;
+}
+#preview-04:checked ~ .archive-grid .grid-item[data-index="04"] .close-label {
+  pointer-events: auto;
+}
+ 
+#preview-05:checked ~ .archive-grid .grid-item[data-index="05"] .caption {
+  font-weight: 500;
+}
+#preview-05:checked ~ .archive-grid .grid-item[data-index="05"] .open-label {
+  pointer-events: none;
+}
+#preview-05:checked ~ .archive-grid .grid-item[data-index="05"] .close-label {
+  pointer-events: auto;
+}
+ 
+#preview-06:checked ~ .archive-grid .grid-item[data-index="06"] .caption {
+  font-weight: 500;
+}
+#preview-06:checked ~ .archive-grid .grid-item[data-index="06"] .open-label {
+  pointer-events: none;
+}
+#preview-06:checked ~ .archive-grid .grid-item[data-index="06"] .close-label {
+  pointer-events: auto;
+}
+ 
+#preview-07:checked ~ .archive-grid .grid-item[data-index="07"] .caption {
+  font-weight: 500;
+}
+#preview-07:checked ~ .archive-grid .grid-item[data-index="07"] .open-label {
+  pointer-events: none;
+}
+#preview-07:checked ~ .archive-grid .grid-item[data-index="07"] .close-label {
+  pointer-events: auto;
+}
+ 
+#preview-08:checked ~ .archive-grid .grid-item[data-index="08"] .caption {
+  font-weight: 500;
+}
+#preview-08:checked ~ .archive-grid .grid-item[data-index="08"] .open-label {
+  pointer-events: none;
+}
+#preview-08:checked ~ .archive-grid .grid-item[data-index="08"] .close-label {
+  pointer-events: auto;
+}
+ 
+#preview-09:checked ~ .archive-grid .grid-item[data-index="09"] .caption {
+  font-weight: 500;
+}
+#preview-09:checked ~ .archive-grid .grid-item[data-index="09"] .open-label {
+  pointer-events: none;
+}
+#preview-09:checked ~ .archive-grid .grid-item[data-index="09"] .close-label {
+  pointer-events: auto;
+}
+ 
+#preview-10:checked ~ .archive-grid .grid-item[data-index="10"] .caption {
+  font-weight: 500;
+}
+#preview-10:checked ~ .archive-grid .grid-item[data-index="10"] .open-label {
+  pointer-events: none;
+}
+#preview-10:checked ~ .archive-grid .grid-item[data-index="10"] .close-label {
+  pointer-events: auto;
+}
+ 
+#preview-11:checked ~ .archive-grid .grid-item[data-index="11"] .caption {
+  font-weight: 500;
+}
+#preview-11:checked ~ .archive-grid .grid-item[data-index="11"] .open-label {
+  pointer-events: none;
+}
+#preview-11:checked ~ .archive-grid .grid-item[data-index="11"] .close-label {
+  pointer-events: auto;
+}
+ 
+#preview-12:checked ~ .archive-grid .grid-item[data-index="12"] .caption {
+  font-weight: 500;
+}
+#preview-12:checked ~ .archive-grid .grid-item[data-index="12"] .open-label {
+  pointer-events: none;
+}
+#preview-12:checked ~ .archive-grid .grid-item[data-index="12"] .close-label {
+  pointer-events: auto;
+}
+ 
+#preview-13:checked ~ .archive-grid .grid-item[data-index="13"] .caption {
+  font-weight: 500;
+}
+#preview-13:checked ~ .archive-grid .grid-item[data-index="13"] .open-label {
+  pointer-events: none;
+}
+#preview-13:checked ~ .archive-grid .grid-item[data-index="13"] .close-label {
+  pointer-events: auto;
+}
+ 
+#preview-14:checked ~ .archive-grid .grid-item[data-index="14"] .caption {
+  font-weight: 500;
+}
+#preview-14:checked ~ .archive-grid .grid-item[data-index="14"] .open-label {
+  pointer-events: none;
+}
+#preview-14:checked ~ .archive-grid .grid-item[data-index="14"] .close-label {
+  pointer-events: auto;
+}
+ 
+#preview-15:checked ~ .archive-grid .grid-item[data-index="15"] .caption {
+  font-weight: 500;
+}
+#preview-15:checked ~ .archive-grid .grid-item[data-index="15"] .open-label {
+  pointer-events: none;
+}
+#preview-15:checked ~ .archive-grid .grid-item[data-index="15"] .close-label {
+  pointer-events: auto;
+}
+ 
+#preview-16:checked ~ .archive-grid .grid-item[data-index="16"] .caption {
+  font-weight: 500;
+}
+#preview-16:checked ~ .archive-grid .grid-item[data-index="16"] .open-label {
+  pointer-events: none;
+}
+#preview-16:checked ~ .archive-grid .grid-item[data-index="16"] .close-label {
+  pointer-events: auto;
+}
+ 
+#preview-17:checked ~ .archive-grid .grid-item[data-index="17"] .caption {
+  font-weight: 500;
+}
+#preview-17:checked ~ .archive-grid .grid-item[data-index="17"] .open-label {
+  pointer-events: none;
+}
+#preview-17:checked ~ .archive-grid .grid-item[data-index="17"] .close-label {
+  pointer-events: auto;
+}
+ 
+#preview-18:checked ~ .archive-grid .grid-item[data-index="18"] .caption {
+  font-weight: 500;
+}
+#preview-18:checked ~ .archive-grid .grid-item[data-index="18"] .open-label {
+  pointer-events: none;
+}
+#preview-18:checked ~ .archive-grid .grid-item[data-index="18"] .close-label {
+  pointer-events: auto;
+}
+ 
+#preview-19:checked ~ .archive-grid .grid-item[data-index="19"] .caption {
+  font-weight: 500;
+}
+#preview-19:checked ~ .archive-grid .grid-item[data-index="19"] .open-label {
+  pointer-events: none;
+}
+#preview-19:checked ~ .archive-grid .grid-item[data-index="19"] .close-label {
+  pointer-events: auto;
+}
+ 
+#preview-20:checked ~ .archive-grid .grid-item[data-index="20"] .caption {
+  font-weight: 500;
+}
+#preview-20:checked ~ .archive-grid .grid-item[data-index="20"] .open-label {
+  pointer-events: none;
+}
+#preview-20:checked ~ .archive-grid .grid-item[data-index="20"] .close-label {
+  pointer-events: auto;
+}
+ 
+#preview-21:checked ~ .archive-grid .grid-item[data-index="21"] .caption {
+  font-weight: 500;
+}
+#preview-21:checked ~ .archive-grid .grid-item[data-index="21"] .open-label {
+  pointer-events: none;
+}
+#preview-21:checked ~ .archive-grid .grid-item[data-index="21"] .close-label {
+  pointer-events: auto;
+}
+ 
+#preview-22:checked ~ .archive-grid .grid-item[data-index="22"] .caption {
+  font-weight: 500;
+}
+#preview-22:checked ~ .archive-grid .grid-item[data-index="22"] .open-label {
+  pointer-events: none;
+}
+#preview-22:checked ~ .archive-grid .grid-item[data-index="22"] .close-label {
+  pointer-events: auto;
+}
+ 
+#preview-23:checked ~ .archive-grid .grid-item[data-index="23"] .caption {
+  font-weight: 500;
+}
+#preview-23:checked ~ .archive-grid .grid-item[data-index="23"] .open-label {
+  pointer-events: none;
+}
+#preview-23:checked ~ .archive-grid .grid-item[data-index="23"] .close-label {
+  pointer-events: auto;
+}
+ 
+#preview-24:checked ~ .archive-grid .grid-item[data-index="24"] .caption {
+  font-weight: 500;
+}
+#preview-24:checked ~ .archive-grid .grid-item[data-index="24"] .open-label {
+  pointer-events: none;
+}
+#preview-24:checked ~ .archive-grid .grid-item[data-index="24"] .close-label {
+  pointer-events: auto;
+}
+ 
+#preview-25:checked ~ .archive-grid .grid-item[data-index="25"] .caption {
+  font-weight: 500;
+}
+#preview-25:checked ~ .archive-grid .grid-item[data-index="25"] .open-label {
+  pointer-events: none;
+}
+#preview-25:checked ~ .archive-grid .grid-item[data-index="25"] .close-label {
+  pointer-events: auto;
+}
+ 
+#preview-26:checked ~ .archive-grid .grid-item[data-index="26"] .caption {
+  font-weight: 500;
+}
+#preview-26:checked ~ .archive-grid .grid-item[data-index="26"] .open-label {
+  pointer-events: none;
+}
+#preview-26:checked ~ .archive-grid .grid-item[data-index="26"] .close-label {
+  pointer-events: auto;
+}
+ 
+#preview-27:checked ~ .archive-grid .grid-item[data-index="27"] .caption {
+  font-weight: 500;
+}
+#preview-27:checked ~ .archive-grid .grid-item[data-index="27"] .open-label {
+  pointer-events: none;
+}
+#preview-27:checked ~ .archive-grid .grid-item[data-index="27"] .close-label {
+  pointer-events: auto;
+}
+ 
+#preview-28:checked ~ .archive-grid .grid-item[data-index="28"] .caption {
+  font-weight: 500;
+}
+#preview-28:checked ~ .archive-grid .grid-item[data-index="28"] .open-label {
+  pointer-events: none;
+}
+#preview-28:checked ~ .archive-grid .grid-item[data-index="28"] .close-label {
+  pointer-events: auto;
+}
+ 
+#preview-29:checked ~ .archive-grid .grid-item[data-index="29"] .caption {
+  font-weight: 500;
+}
+#preview-29:checked ~ .archive-grid .grid-item[data-index="29"] .open-label {
+  pointer-events: none;
+}
+#preview-29:checked ~ .archive-grid .grid-item[data-index="29"] .close-label {
+  pointer-events: auto;
+}
+ 
+#preview-30:checked ~ .archive-grid .grid-item[data-index="30"] .caption {
+  font-weight: 500;
+}
+#preview-30:checked ~ .archive-grid .grid-item[data-index="30"] .open-label {
+  pointer-events: none;
+}
+#preview-30:checked ~ .archive-grid .grid-item[data-index="30"] .close-label {
+  pointer-events: auto;
+}
+ 
+#preview-31:checked ~ .archive-grid .grid-item[data-index="31"] .caption {
+  font-weight: 500;
+}
+#preview-31:checked ~ .archive-grid .grid-item[data-index="31"] .open-label {
+  pointer-events: none;
+}
+#preview-31:checked ~ .archive-grid .grid-item[data-index="31"] .close-label {
+  pointer-events: auto;
+}
+ 
+#preview-32:checked ~ .archive-grid .grid-item[data-index="32"] .caption {
+  font-weight: 500;
+}
+#preview-32:checked ~ .archive-grid .grid-item[data-index="32"] .open-label {
+  pointer-events: none;
+}
+#preview-32:checked ~ .archive-grid .grid-item[data-index="32"] .close-label {
+  pointer-events: auto;
+}
+
+ 
+/* ---------- PREVIEW PANEL ---------- */
+/* Always occupies its 50% column. Empty/blank until something is clicked.
+   56 items are stacked in the same slot via CSS grid; only the one
+   matching the checked radio is visible. */
+ 
+.preview-panel {
+  position: sticky;
+  flex: 0 0 50%;
+  max-width: 50%;
+  top: calc(var(--header-h) + 24px);
+  display: grid;
+}
+ 
+.preview-item {
+  grid-area: 1 / 1;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  align-self: start;
+}
+ 
+.preview-item[data-slot="reset"] {
+  opacity: 1;
+}
+ 
+.preview-figure {
+  margin: 0;
+  width: 90%;
+}
+ 
+.preview-caption {
+  margin: 14px 2px 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+ 
+/* ---------- NARROW: grid stays caption-only, panel remains image-only ---------- */
+ 
+@media (max-width: 900px) {
+  /* Grid never reveals images at this width, hover or active */
+  .archive-grid .grid-item figure {
+    display: none;
+  }
+  .archive-grid { column-count: 1; }
+}
+ 
+@media (max-width: 680px) {
+  .site-header {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .main-nav { justify-self: start; }
+  .archive-layout {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .archive-grid,
+  .preview-panel {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .preview-panel {
+    position: static;
+  }
+  main { padding: 0 18px; }
+}
+
+@media (max-width: 1100px) {
+  .lib-grid { column-count: 2; }
+}
+
+@media (max-width: 680px) {
+  .lib-header {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .main-nav { justify-self: start; }
+  .lib-grid { column-count: 1; }
+  main { padding: 0 18px; }
+}
