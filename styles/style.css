@@ -310,15 +310,25 @@ body.themed-page::-webkit-scrollbar-thumb:hover {
 /* dotted frame for htmlday page */
 .dotted-frame {
   font: 16px/1.5 "Courier Prime", monospace;
-  width: 70%;
+  width: 60%;
   margin: 24px;
   padding: 20px;
-  border: 1px dotted;
+  border: 20px dotted;
   box-shadow: 0 0 50px 15px rgb(255, 255, 255);
   border-radius: 12px;
+  border-color: #b3e0e0;
   box-sizing: border-box;
-  background: #BEE;
-  background: linear-gradient(180deg, rgba(187, 238, 238, 1) 0%, rgba(255, 255, 255, 1) 100%);
+  color: #808080;
+}
+
+.dotted-frame a{
+  color: #7c7c1f;
+  text-decoration: none;
+}
+.dotted-frame a:hover {
+  background-color: #FFFFE0;
+  font:25px/1.5 "Courier Prime", monospace;
+  font-weight: bold;
 }
 
 /* tighten spacing on small screens */
