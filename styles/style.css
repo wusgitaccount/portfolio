@@ -308,27 +308,72 @@ body.themed-page::-webkit-scrollbar-thumb:hover {
 }
 
 /* dotted frame for htmlday page */
+.page-layout {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
 .dotted-frame {
   font: 16px/1.5 "Courier Prime", monospace;
-  width: 60%;
   margin: 24px;
   padding: 20px;
   border: 20px dotted;
   box-shadow: 0 0 50px 15px rgb(255, 255, 255);
+}
+
+.dotted-frame--main {
+  flex: 1 1 50%;
+  min-width: 0;
   border-radius: 12px;
   border-color: #b3e0e0;
   box-sizing: border-box;
   color: #808080;
 }
 
-.dotted-frame a{
+.dotted-frame a {
   color: #7c7c1f;
   text-decoration: none;
 }
 .dotted-frame a:hover {
   background-color: #FFFFE0;
-  font:25px/1.5 "Courier Prime", monospace;
+  font: 25px/1.5 "Courier Prime", monospace;
   font-weight: bold;
+}
+
+
+/* yellow frame (marquee) */
+.dotted-frame--yellow {
+  border: 15px dotted;
+  display: block;
+  border-color: #fff59f;
+  border-radius: 12px;
+  box-sizing: border-box;
+  margin: 16px auto 0;
+  width: calc(100% - 150px);
+}
+
+/* pink frame (resources) */
+.dotted-frame--pink {
+  flex: 1 1 20%;
+  min-width: 0;
+  border-radius: 12px;
+  border-color:  #c06080;
+}
+
+.resources h2 {
+  margin: 0 0 0.75em;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.resources pre {
+  font: 13px/1.4 "Courier Prime", monospace;
+  margin: 0;
+  white-space: pre;
 }
 
 /* tighten spacing on small screens */
@@ -341,6 +386,18 @@ body.themed-page::-webkit-scrollbar-thumb:hover {
   }
 }
 
+@media (max-width: 700px) {
+  .page-layout {
+    flex-direction: column;
+    padding: 12px;
+  }
+  .dotted-frame:not(.dotted-frame--pink),
+  .dotted-frame--pink {
+    flex: none;
+    width: 100%;
+    padding: 28px 24px 40px;
+  }
+}
 
 /* styles for project library page */
 
