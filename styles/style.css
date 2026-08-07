@@ -1220,3 +1220,19 @@ main {
   .lib-grid { column-count: 1; }
   main { padding: 0 18px; }
 }
+
+ .scroll-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+ 
+  .scroll-box {
+    height: 180px;
+    overflow-y: scroll;
+    border: 1px solid #ccc;
+    padding: 12px;
+    background: #fff;
+    font-size: 14px;
+    line-height: 1.6;
+  }
