@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JRL Birthday Loop</title>
+
+<style>
+  :root{
+    --bg: #ffffff;
+    --ink: #001930;
+    --muted: #766E60;
+    --line-color: #656464;
+    --line-color-soft: #8e8685;
+    --gold: #D9A441;
+    --card-bg: #FFFFFF;
+    --ring: #1C2430;
+  }
+
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: proxima-nova, sans-serif;
+    font-style: normal;
+    font-weight: 100;
+  }
+
+  .wrap {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 48px 24px 64px;
+  }
+
+  header {
+    
+    margin-bottom: 8px;
+  }
+
+  .kicker {
+    font-family: proxima-nova, sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.02em;
+    color: var(--muted);
+    margin: 0 0 14px;
+  }
+
+  h1 {
+    font-family: proxima-nova, sans-serif;
+    font-size: clamp(2rem, 5vw, 2.9rem);
+    line-height: 1.1;
+    margin: 0 0 14px;
+  }
+
+  .diagram {
+    margin: 40px auto 8px;
+    max-width: 760px;
+  }
+
+  .diagram svg {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: visible;
+    
+  }
+
+  .stop-name {
+    font-family: proxima-nova, sans-serif;
+    font-weight: 700;
+    font-size: 21px;
+    fill: var(--ink);
+  }
+
+  .stop-place {
+    font-family: proxima-nova, sans-serif;
+    font-style: italic;
+    font-size: 17px;
+    fill: var(--ink);
+  }
+
+  .stop-note {
+    font-family: proxima-nova, sans-serif;
+    font-size: 13.5px;
+    fill: var(--muted);
+  }
+
+  .legend {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 28px;
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+
+
+  footer {
+    text-align: center;
+    margin-top: 40px;
+    font-family: proxima-nova, sans-serif;
+    font-style: italic;
+    color: var(--muted);
+    font-size: 0.95rem;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <p class="kicker">Tāmaki Makaurau, City Rail Link</p>
+    <h1>JRL Jordan Reid Lewis</h1>
+    <p>Happy Birthday :3</p>
+  </header>
+
+  <div class="diagram">
+    <svg viewBox="-60 -50 1300 800" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Loop map of seven rail stations with a place marked at each stop">
+
+      <!-- the loop, 7 stops evenly spaced around the ellipse -->
+      <ellipse cx="550" cy="340" rx="360" ry="200"
+            fill="none" stroke="var(--line-color)" stroke-width="3" stroke-dasharray="1 10"
+            stroke-linejoin="round" stroke-linecap="round" />
+
+
+
+
+      <!-- === MAUNGAWHAU / MT EDEN === -->
+      <g>
+        <line x1="805" y1="199" x2="872" y2="132" stroke="var(--line-color-soft)" stroke-width="2" stroke-dasharray="4 4" />
+        <circle cx="805" cy="199" r="13" fill="var(--card-bg)" stroke="var(--ring)" stroke-width="4" />
+        <text x="882" y="112" text-anchor="start" class="stop-name">Maungawhau</text>
+        <text x="882" y="137" text-anchor="start" class="stop-place">Small Gods Taproom</text>
+        <text x="882" y="157" text-anchor="start" class="stop-note">Beer break (4 min walk)</text>
+      </g>
+
+      <!-- === KARANGA-A-HAPE / K RD === -->
+      <g>
+        <line x1="908" y1="362" x2="1002" y2="373" stroke="var(--line-color-soft)" stroke-width="2" stroke-dasharray="4 4" />
+        <circle cx="908" cy="362" r="13" fill="var(--card-bg)" stroke="var(--ring)" stroke-width="4" />
+        <text x="1012" y="353" text-anchor="start" class="stop-name">Karanga-a-Hape</text>
+        <text x="1012" y="378" text-anchor="start" class="stop-place">No. 7</text>
+        <text x="1012" y="398" text-anchor="start" class="stop-note">Arrive between 4-6pm for happy hour (1 min walk)</text>
+      </g>
+
+      <!-- === TE WAIHOROTIU / AOTEA === -->
+      <g>
+        <line x1="741" y1="509" x2="792" y2="589" stroke="var(--line-color-soft)" stroke-width="2" stroke-dasharray="4 4" />
+        <circle cx="741" cy="509" r="13" fill="var(--card-bg)" stroke="var(--ring)" stroke-width="4" />
+        <text x="802" y="569" text-anchor="start" class="stop-name">Te Waihorotiu</text>
+        <text x="802" y="594" text-anchor="start" class="stop-place">Fed Street Deli</text>
+        <text x="802" y="614" text-anchor="start" class="stop-note">Stop here for birthday cake (4 min walk)</text>
+      </g>
+
+      <!-- === WAITEMATĀ / BRITOMART === -->
+      <g>
+        <line x1="431" y1="529" x2="431" y2="619" stroke="var(--line-color-soft)" stroke-width="2" stroke-dasharray="4 4" />
+        <circle cx="431" cy="529" r="13" fill="var(--card-bg)" stroke="var(--ring)" stroke-width="4" />
+        <text x="431" y="647" text-anchor="middle" class="stop-name">Waitematā</text>
+        <text x="431" y="670" text-anchor="middle" class="stop-place"></text>
+        <text x="431" y="689" text-anchor="middle" class="stop-note"></text>
+      </g>
+
+      <!-- === PARNELL === -->
+      <g>
+        <line x1="210" y1="406" x2="120" y2="437" stroke="var(--line-color-soft)" stroke-width="2" stroke-dasharray="4 4" />
+        <circle cx="210" cy="406" r="13" fill="var(--card-bg)" stroke="var(--ring)" stroke-width="4" />
+        <text x="110" y="417" text-anchor="end" class="stop-name">Parnell</text>
+        <text x="110" y="442" text-anchor="end" class="stop-place"></text>
+        <text x="110" y="462" text-anchor="end" class="stop-note"></text>
+      </g>
+
+      <!-- === NEWMARKET === -->
+      <g>
+        <line x1="245" y1="234" x2="165" y2="183" stroke="var(--line-color-soft)" stroke-width="2" stroke-dasharray="4 4" />
+        <circle cx="245" cy="234" r="13" fill="var(--card-bg)" stroke="var(--ring)" stroke-width="4" />
+        <text x="155" y="163" text-anchor="end" class="stop-name">Newmarket</text>
+        <text x="155" y="188" text-anchor="end" class="stop-place">Subtype</text>
+        <text x="155" y="208" text-anchor="end" class="stop-note">8 min walk</text>
+      </g>
+
+      <!-- === GRAFTON === -->
+      <g>
+        <line x1="510" y1="141" x2="510" y2="51" stroke="var(--line-color-soft)" stroke-width="2" stroke-dasharray="4 4" />
+        <circle cx="510" cy="141" r="13" fill="var(--card-bg)" stroke="var(--ring)" stroke-width="4" />
+        <text x="510" y="26" text-anchor="middle" class="stop-name">Grafton</text>
+        <text x="510" y="1" text-anchor="middle" class="stop-place"></text>
+        <text x="510" y="-19" text-anchor="middle" class="stop-note"></text>
+      </g>
+
+    </svg>
+  </div>
+
+  <div class="legend">
+     <a href="https://maps.app.goo.gl/1jSUuFwbWHgiTaMN6" target="_blank">View on Google Maps</a>
+  </div>
+
+  <footer> </footer>
+
+</div>
+</body>
+</html>
