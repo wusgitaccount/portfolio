@@ -3,59 +3,63 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>JRL Birthday Loop</title>
+<title>jrl birthday loop</title>
 
 <style>
   :root{
     --bg: #ffffff;
-    --ink: #001930;
-    --muted: #766E60;
+    --ink: #111111;
+    --muted: #6b6b6b;
     --line-color: #656464;
-    --line-color-soft: #8e8685;
-    --gold: #D9A441;
-    --card-bg: #FFFFFF;
-    --ring: #1C2430;
+    --line-color-soft: #b7b3b0;
+    --card-bg: #ffffff;
+    --ring: #111111;
   }
 
   * { box-sizing: border-box; }
+
   html, body {
     margin: 0;
     background: var(--bg);
     color: var(--ink);
-    font-family: proxima-nova, sans-serif;
-    font-style: normal;
-    font-weight: 100;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 17px;
+    line-height: 1.6;
   }
+
+  a { color: var(--ink); text-decoration: underline; text-decoration-color: var(--line-color-soft); }
+  a:hover { text-decoration-color: var(--ink); }
 
   .wrap {
     max-width: 900px;
     margin: 0 auto;
-    padding: 48px 24px 64px;
+    padding: 48px 24px 72px;
   }
 
-  header {
-    
-    margin-bottom: 8px;
-  }
+  header { margin-bottom: 36px; }
 
   .kicker {
-    font-family: proxima-nova, sans-serif;
-    font-size: 0.8rem;
-    letter-spacing: 0.02em;
+    font-size: 0.85rem;
     color: var(--muted);
-    margin: 0 0 14px;
+    margin: 0 0 6px;
   }
 
   h1 {
-    font-family: proxima-nova, sans-serif;
-    font-size: clamp(2rem, 5vw, 2.9rem);
-    line-height: 1.1;
-    margin: 0 0 14px;
+    font-weight: normal;
+    font-size: 1.9rem;
+    margin: 0 0 8px;
+  }
+
+  header p { margin: 0; color: var(--muted); }
+
+  .layout {
+    display: flex;
+    gap: 48px;
+    align-items: flex-start;
   }
 
   .diagram {
-    margin: 40px auto 8px;
-    max-width: 760px;
+    flex: 0 0 220px;
   }
 
   .diagram svg {
@@ -63,46 +67,65 @@
     height: auto;
     display: block;
     overflow: visible;
-    
   }
 
-  .stop-name {
-    font-family: proxima-nova, sans-serif;
-    font-weight: 700;
-    font-size: 21px;
+  .diagram-name {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 15px;
     fill: var(--ink);
+  }
+
+  .itinerary { flex: 1; min-width: 0; }
+
+  ol.stops {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  ol.stops li {
+    padding: 14px 0;
+    border-bottom: 1px solid #eee;
+  }
+
+  ol.stops li:first-child { padding-top: 0; }
+
+  .stop-num {
+    font-family: 'Courier New', monospace;
+    font-size: 0.85rem;
+    color: var(--muted);
+    display: block;
+  }
+
+  .stop-station {
+    font-size: 0.9rem;
+    color: var(--muted);
+    display: block;
+    margin-top: 2px;
   }
 
   .stop-place {
-    font-family: proxima-nova, sans-serif;
-    font-style: italic;
-    font-size: 17px;
-    fill: var(--ink);
+    font-size: 1.15rem;
+    display: block;
+    margin-top: 2px;
   }
 
   .stop-note {
-    font-family: proxima-nova, sans-serif;
-    font-size: 13.5px;
-    fill: var(--muted);
-  }
-
-  .legend {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    margin-top: 28px;
+    font-size: 0.95rem;
     color: var(--muted);
-    font-size: 0.85rem;
+    display: block;
+    margin-top: 4px;
   }
 
   footer {
-    text-align: center;
-    margin-top: 40px;
-    font-family: proxima-nova, sans-serif;
-    font-style: italic;
+    margin-top: 48px;
     color: var(--muted);
-    font-size: 0.95rem;
+    font-size: 0.9rem;
+  }
+
+  @media (max-width: 640px) {
+    .layout { flex-direction: column; }
+    .diagram { flex: none; max-width: 260px; margin: 0 auto 12px; }
   }
 </style>
 </head>
@@ -110,90 +133,97 @@
 <div class="wrap">
 
   <header>
-    <p class="kicker">Tāmaki Makaurau, City Rail Link</p>
-    <h1>JRL Jordan Reid Lewis</h1>
-    <p>Happy Birthday :3</p>
+    <p class="kicker">tāmaki makaurau, city rail link ♡</p>
+    <h1>jrl, birthday loop</h1>
+    <p>    <a href="https://maps.app.goo.gl/YEgfhS4mdCx73eyx8" target="_blank">view the full list on google maps</a>
+    </p>
+    <img src="./assets/jrl2.JPEG" style="width: 30%; height: auto; margin-top: 12px; border-radius: 10px;" />
   </header>
 
-  <div class="diagram">
-    <svg viewBox="-20 140 1120 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Line map of seven rail stations with a place marked at each stop">
+  <div class="layout">
 
-      <!-- the line, 7 stops evenly spaced along it -->
-      <line x1="60" y1="340" x2="1040" y2="340"
-            stroke="var(--line-color)" stroke-width="3" stroke-dasharray="1 10"
-            stroke-linecap="round" />
+    <div class="diagram">
+      <svg viewBox="-10 40 280 800" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Vertical line showing the six stops in order">
+        <line x1="100" y1="60" x2="100" y2="800" stroke="var(--line-color)" stroke-width="2" stroke-dasharray="1 8" stroke-linecap="round" />
 
-      <!-- === MAUNGAWHAU / MT EDEN === -->
-      <g>
-        <line x1="100" y1="340" x2="100" y2="250" stroke="var(--line-color-soft)" stroke-width="2" stroke-dasharray="4 4" />
-        <circle cx="100" cy="340" r="13" fill="var(--card-bg)" stroke="var(--ring)" stroke-width="4" />
-        <text x="100" y="180" text-anchor="middle" class="stop-note">Beer to start, 3 min walk</text>
-        <text x="100" y="200" text-anchor="middle" class="stop-place">Small Gods Taproom</text>
-        <text x="100" y="225" text-anchor="middle" class="stop-name">Maungawhau</text>
-      </g>
+        <g>
+          <circle cx="100" cy="80" r="10" fill="var(--card-bg)" stroke="var(--ring)" stroke-width="3" />
+          <text x="122" y="85" class="diagram-name">Maungawhau</text>
+        </g>
 
-      <!-- === KARANGA-A-HAPE / K RD === -->
-      <g>
-        <line x1="250" y1="340" x2="250" y2="430" stroke="var(--line-color-soft)" stroke-width="2" stroke-dasharray="4 4" />
-        <circle cx="250" cy="340" r="13" fill="var(--card-bg)" stroke="var(--ring)" stroke-width="4" />
-        <text x="250" y="458" text-anchor="middle" class="stop-name">Karanga-a-Hape</text>
-        <text x="250" y="481" text-anchor="middle" class="stop-place">No. 7</text>
-        <text x="250" y="500" text-anchor="middle" class="stop-note">Arrive between 4-6pm for happy hour, 1 min walk</text>
-      </g>
+        <g>
+          <circle cx="100" cy="220" r="10" fill="var(--card-bg)" stroke="var(--ring)" stroke-width="3" />
+          <text x="122" y="225" class="diagram-name">Newmarket</text>
+        </g>
 
-      <!-- === TE WAIHOROTIU / AOTEA === -->
-      <g>
-        <line x1="400" y1="340" x2="400" y2="250" stroke="var(--line-color-soft)" stroke-width="2" stroke-dasharray="4 4" />
-        <circle cx="400" cy="340" r="13" fill="var(--card-bg)" stroke="var(--ring)" stroke-width="4" />
-        <text x="400" y="180" text-anchor="middle" class="stop-note">Birthday cake, 4 min walk</text>
-        <text x="400" y="200" text-anchor="middle" class="stop-place">Fed Street Deli</text>
-        <text x="400" y="225" text-anchor="middle" class="stop-name">Te Waihorotiu</text>
-      </g>
+        <g>
+          <circle cx="100" cy="360" r="10" fill="var(--card-bg)" stroke="var(--ring)" stroke-width="3" />
+          <text x="122" y="365" class="diagram-name">Parnell</text>
+        </g>
 
-      <!-- === WAITEMATĀ / BRITOMART === -->
-      <g>
-        <line x1="550" y1="340" x2="550" y2="430" stroke="var(--line-color-soft)" stroke-width="2" stroke-dasharray="4 4" />
-        <circle cx="550" cy="340" r="13" fill="var(--card-bg)" stroke="var(--ring)" stroke-width="4" />
-        <text x="550" y="458" text-anchor="middle" class="stop-name">Waitematā</text>
-        <text x="550" y="481" text-anchor="middle" class="stop-place"></text>
-        <text x="550" y="500" text-anchor="middle" class="stop-note"></text>
-      </g>
+        <g>
+          <circle cx="100" cy="500" r="10" fill="var(--card-bg)" stroke="var(--ring)" stroke-width="3" />
+          <text x="122" y="505" class="diagram-name">Waitematā</text>
+        </g>
 
-      <!-- === PARNELL === -->
-      <g>
-        <line x1="700" y1="340" x2="700" y2="250" stroke="var(--line-color-soft)" stroke-width="2" stroke-dasharray="4 4" />
-        <circle cx="700" cy="340" r="13" fill="var(--card-bg)" stroke="var(--ring)" stroke-width="4" />
-        <text x="700" y="180" text-anchor="middle" class="stop-note"></text>
-        <text x="700" y="200" text-anchor="middle" class="stop-place"></text>
-        <text x="700" y="225" text-anchor="middle" class="stop-name">Parnell</text>
-      </g>
+        <g>
+          <circle cx="100" cy="640" r="10" fill="var(--card-bg)" stroke="var(--ring)" stroke-width="3" />
+          <text x="122" y="645" class="diagram-name">Te Waihorotiu</text>
+        </g>
 
-      <!-- === NEWMARKET === -->
-      <g>
-        <line x1="850" y1="340" x2="850" y2="430" stroke="var(--line-color-soft)" stroke-width="2" stroke-dasharray="4 4" />
-        <circle cx="850" cy="340" r="13" fill="var(--card-bg)" stroke="var(--ring)" stroke-width="4" />
-        <text x="850" y="458" text-anchor="middle" class="stop-name">Newmarket</text>
-        <text x="850" y="481" text-anchor="middle" class="stop-place">Subtype</text>
-        <text x="850" y="500" text-anchor="middle" class="stop-note">8 min walk</text>
-      </g>
+        <g>
+          <circle cx="100" cy="780" r="10" fill="var(--card-bg)" stroke="var(--ring)" stroke-width="3" />
+          <text x="122" y="785" class="diagram-name">Karangahape</text>
+        </g>
+      </svg>
+    </div>
 
-      <!-- === GRAFTON === -->
-      <g>
-        <line x1="1000" y1="340" x2="1000" y2="250" stroke="var(--line-color-soft)" stroke-width="2" stroke-dasharray="4 4" />
-        <circle cx="1000" cy="340" r="13" fill="var(--card-bg)" stroke="var(--ring)" stroke-width="4" />
-        <text x="1000" y="180" text-anchor="middle" class="stop-note"></text>
-        <text x="1000" y="200" text-anchor="middle" class="stop-place"></text>
-        <text x="1000" y="225" text-anchor="middle" class="stop-name">Grafton</text>
-      </g>
+    <div class="itinerary">
+      <ol class="stops">
+        <li>
+          <span class="stop-num">stop 1</span>
+          <span class="stop-station">Maungawhau Station</span>
+          <span class="stop-place">Small Gods Taproom</span>
+          <span class="stop-note">4 min walk</span>
+        </li>
+        <li>
+          <span class="stop-num">stop 2</span>
+          <span class="stop-station">Newmarket Train Station</span>
+          <span class="stop-place">Subtype Newmarket</span>
+          <span class="stop-note">8 min walk</span>
+        </li>
+        <li>
+          <span class="stop-num">stop 3</span>
+          <span class="stop-station">Parnell</span>
+          <span class="stop-place"></span>
+          <span class="stop-note"></span>
+        </li>
+        <li>
+          <span class="stop-num">stop 4</span>
+          <span class="stop-station">Waitematā Train Station</span>
+          <span class="stop-place"></span>
+          <span class="stop-note"></span>
+        </li>
+        <li>
+          <span class="stop-num">stop 5</span>
+          <span class="stop-station">Te Waihorotiu Station</span>
+          <span class="stop-place">Federal Delicatessen</span>
+          <span class="stop-note">4 min walk</span>
+        </li>
+        <li>
+          <span class="stop-num">stop 6</span>
+          <span class="stop-station">Karangahape Station</span>
+          <span class="stop-place">No.7</span>
+          <span class="stop-note">1 min walk, arrive between 4-6pm for happy hour</span>
+        </li>
+      </ol>
+    </div>
 
-    </svg>
   </div>
 
-  <div class="legend">
-    <a href="https://maps.app.goo.gl/1jSUuFwbWHgiTaMN6" target="_blank">View on Google Maps</a>
-  </div>
-
-  <footer> </footer>
+  <footer>
+        <img src="./assets/jrl.png" style="width: 100%; height: auto; margin-top: 12px; border-radius: 10px;" />
+  </footer>
 
 </div>
 </body>
